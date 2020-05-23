@@ -20,6 +20,7 @@ const NavButton = styled.li`
   border-right: 2px solid #d5d6d6;
   padding: 16.5px 20px;
   color: #2E3134;
+  text-transform: uppercase;
 `;
 
 function ProductNav() {
