@@ -25,19 +25,30 @@ const HeroContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 `;
 
 const HeroHeading = styled.h1`
-  font-size: 72px;
-  line-height: 90px;
+  font-size: 2em;
+  padding: 10px;
+  line-height: 1.2em;
   color: #FFF;
   text-align: center;
+  @media (min-width: 780px) {
+    font-size: 3em;
+  }
+  @media (min-width: 1100px) {
+    font-size: 4em;
+  }
 `;
 
 const HeroButton = styled(Button)`
-  padding: 10px 80px;
+  padding: 15px 85px;
   margin-top: 48px;
-
+  font-weight: 550;
+  &:hover {
+    background-color: rgba(90,78,189,1);
+  }
 `;
 
 function Hero() {
