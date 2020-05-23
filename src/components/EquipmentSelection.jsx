@@ -1,16 +1,47 @@
 import React from "react";
 import styled from "styled-components";
+import EquipmentCard from './EquipmentCard';
+import EQUIPMENT from '../data/EquipmentData';
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
+const CardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Heading = styled.h2`
+  font-size: 24px;
+  line-height: 28px;
+  color: #34383C;
+  text-align: center;
+`;
+
 function EquipmentSelection() {
+  const getEquipment = () => {
+    const equipment = [];
+    EQUIPMENT.forEach(item => equipment.push(
+      <EquipmentCard key={`equipment~${item.id}`} item={item} />
+    ))
+    return equipment;
+  }
+  
   return (
     <Wrapper>
-      <h1>EquipmentSelection</h1>
+      <Heading>
+        Interested in our exciting iFit-enabled equipment?
+      </Heading>
+      <CardWrapper>
+        { getEquipment() }
+      </CardWrapper>
+
     </Wrapper>
   );
 }

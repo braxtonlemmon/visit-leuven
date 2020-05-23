@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 `;
 
 function DesktopLibrary() {
