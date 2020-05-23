@@ -69,12 +69,48 @@ const SocialMedia = styled.div`
   }
 `;
 
-const Legal = styled.div`
-
+const Misc = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
 `;
 
 const Language = styled.div`
+  position: absolute;
+  left: 40px;
+  color: white;
+  select {
+    position: relative;
+    background: #2E3134;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.5;
+    color: #FFF;
+    cursor: pointer;
+  }
+  option {
+    background: white;
+    color: black;
+    padding: 5px;
+  }
+`;
 
+
+
+
+const Legal = styled.div`
+  ul {
+    display: flex;
+  }
+  li {
+    margin: 15px;
+    color: #FFF;
+  }
 `;
 
 function Footer() {
@@ -153,7 +189,29 @@ function Footer() {
         
        
       </SocialMedia>
-      <Legal></Legal>
+      <Misc>
+        <Language>
+          <select name="language" id="language">
+            <option value="english">English</option>
+            <option value="french">French</option>
+            <option value="spanish">Spanish</option>
+            <option value="german">German</option>
+            <option value="dutch">Dutch</option>
+            <option value="polish">Polish</option> 
+          </select>
+        </Language>
+        <Legal>
+          <ul>
+            <li>© iFit.com. All Rights Reserved.</li>
+            <Link to='#'>
+              <li>Privacy Policy</li>
+            </Link>
+            <Link to='#'>
+              <li>Terms of Use</li>
+            </Link>
+          </ul>
+        </Legal>
+      </Misc>
     </Wrapper>
   );
 }
