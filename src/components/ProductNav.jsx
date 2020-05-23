@@ -17,10 +17,14 @@ const NavButtons = styled.ul`
 
 const NavButton = styled.li`
   font-size: 14px;
+  font-weight: 500;
   border-right: 2px solid #d5d6d6;
-  padding: 16.5px 20px;
-  color: #2E3134;
+  padding: 16.5px 43px;
+  color: rgba(46,49,52,0.8);
   text-transform: uppercase;
+  &:hover {
+    color: rgba(46, 49, 52);
+  }
 `;
 
 function ProductNav() {

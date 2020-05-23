@@ -9,9 +9,11 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   font-size: 14px;
+  padding-left: 40px;
+  padding-right: 23px;
 `;
 
-const Logo = styled.div`
+const Logo = styled.img`
 
 `;
 
@@ -21,19 +23,30 @@ const NavLinks = styled.ul`
 
 const NavLink = styled.li`
   text-transform: uppercase;
-  padding: 29px 25px;
+  margin: 29px 25px;
+  padding-bottom: 5px;
+  text-decoration: underline solid transparent;
+  transition: border-bottom 0.3s ease;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-bottom: 1px solid black; 
+  }
 `;
 
 const SignUp = styled(Button)`
   padding: 10px 19px;
+  box-shadow: 0 1px 2px 0 rgba(45, 45, 45, 0.5);
+  &:hover {
+    transform: scale(1.01);
+  }
 `;
 
 function MainNav() {
   return (
     <Wrapper>
-      <Logo>
-        
-      </Logo>
+      <Link to="#">
+        <Logo src={`${process.env.PUBLIC_URL}/img/Group 13 Copy.png`} alt="" />
+      </Link>
       <NavLinks>
         <Link to="#">
           <NavLink>Exercise</NavLink>
