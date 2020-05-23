@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Reset } from 'styled-reset';
 import GlobalStyle from './GlobalStyle';
+import Main from './components/Main';
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,7 +16,7 @@ function App() {
     <Wrapper>
       <Reset />
       <GlobalStyle />
-      <h1>ifit</h1>
+      <Main />
     </Wrapper>
   );
 }
