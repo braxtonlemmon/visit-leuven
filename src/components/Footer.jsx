@@ -17,6 +17,7 @@ const SiteLinks = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
+  padding: 10px 15px;
 `;
 
 const SiteLinksCol = styled.div`
@@ -77,10 +78,37 @@ const Misc = styled.div`
   width: 100%;
 `;
 
+// const Language = styled.div`
+//   position: absolute;
+//   left: 40px;
+//   color: white;
+//   select {
+//     position: relative;
+//     background: #2E3134;
+//     padding: 5px;
+//     border: none;
+//     outline: none;
+//     font-size: 14px;
+//     line-height: 16px;
+//     letter-spacing: 0.5;
+//     color: #FFF;
+//     cursor: pointer;
+//   }
+//   option {
+//     background: white;
+//     color: black;
+//     padding: 5px;
+//   }
+// `;
+
 const Language = styled.div`
-  position: absolute;
-  left: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  border-bottom: 2px solid #585A5D;
+  padding: 20px;
   select {
     position: relative;
     background: #2E3134;
@@ -100,15 +128,23 @@ const Language = styled.div`
   }
 `;
 
-
-
-
 const Legal = styled.div`
-  ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  .legal-links {
     display: flex;
+    padding: 5px;
+    a {
+      margin: 5px 10px;
+    }
+    p:hover {
+      text-decoration: underline;
+    }
   }
-  li {
-    margin: 15px;
+  p {
     color: #FFF;
   }
 `;
@@ -189,7 +225,8 @@ function Footer() {
         
        
       </SocialMedia>
-      <Misc>
+      
+      {/* <Misc> */}
         <Language>
           <select name="language" id="language">
             <option value="english">English</option>
@@ -201,17 +238,17 @@ function Footer() {
           </select>
         </Language>
         <Legal>
-          <ul>
-            <li>© iFit.com. All Rights Reserved.</li>
+          <div className="legal-links">
             <Link to='#'>
-              <li>Privacy Policy</li>
+              <p>Privacy Policy</p>
             </Link>
             <Link to='#'>
-              <li>Terms of Use</li>
+              <p>Terms of Use</p>
             </Link>
-          </ul>
+          </div>
+          <p>© iFit.com. All Rights Reserved.</p>
         </Legal>
-      </Misc>
+      {/* </Misc> */}
     </Wrapper>
   );
 }

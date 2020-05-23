@@ -9,6 +9,12 @@ const Wrapper = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
   border-radius: 4px;
   margin: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+  &:hover {
+    transform: translateY(-0.6px);
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.33), -2px 5px 4px rgba(0, 0, 0, 0.33);
+  }
 `;
 
 const ImageBox = styled.div`
