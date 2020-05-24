@@ -30,7 +30,12 @@ const MenuButton = styled.div`
       width: 35px;
       background: rgba(46, 49, 52, 0.8);
       transition: transform 0.4s ease;
+    }
+    .line1 {
       transform-origin: top left;
+    }
+    .line3 {
+      transform-origin: bottom left;
     }
     .view.line1 {
       transform: rotate(28deg);
