@@ -59,7 +59,7 @@ const HeroHeading = styled.h1`
 
 const HeroButton = styled(Button)`
   padding: 15px 85px;
-  margin-top: 48px;
+  margin-top: 28px;
   font-weight: 550;
   &:hover {
     background-color: rgba(90,78,189,1);
