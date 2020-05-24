@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "core-js/es/map";
+import "core-js/es/set";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
