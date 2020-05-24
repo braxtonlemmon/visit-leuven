@@ -21,7 +21,10 @@ function Header(props) {
         <MainNav isHeroVisible={props.isHeroVisible} />
       </Responsive>
       <Responsive as={Segment} maxWidth={780}>
-        <MobileNav />
+        <MobileNav 
+          handleMenuClick={props.handleMenuClick}
+          viewMenu={props.viewMenu}
+        />
       </Responsive>
     </Wrapper>
   )
