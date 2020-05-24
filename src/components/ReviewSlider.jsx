@@ -26,6 +26,9 @@ const Box = styled.div`
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
   margin: 0 6px;
+  @media (min-width: 780px) {
+    min-width: 400px;
+  }
   @media (min-width: 1200px) {
     min-width: 480px;
   }
