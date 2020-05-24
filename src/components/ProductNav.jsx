@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   width: 100%;
   background: #FFF;
   border-bottom: 0.5px solid #d5d6d6;
-  transition: transform 550ms;
+  transition: transform 500ms;
   transform: translateY(0);
   transform: ${props => props.isHeroVisible ? 'translateY(0)' : 'translateY(-%100)'};
   ${props => {

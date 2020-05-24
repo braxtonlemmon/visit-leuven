@@ -9,14 +9,17 @@ import { Responsive, Segment } from 'semantic-ui-react';
 
 function Main() {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
+  const [isEquipVisible, setIsEquipVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const handleScroll = () => {
-    console.log('inside scroll handle');
-    const hero = document.getElementById('hero').getBoundingClientRect();
     const header = document.getElementById('header').getBoundingClientRect();
-    console.log(header.bottom);
-    console.log(hero.bottom);
+    const hero = document.getElementById('hero').getBoundingClientRect();
+    const equip = document.getElementById('equip').getBoundingClientRect();
+
+    // console.log(window.screen);
+    // console.log(equip);
+    // console.log(window.innerHeight);
     if (hero.bottom < 127) {
       setIsHeroVisible(false);
     } else if (hero.bottom > 127 ) {

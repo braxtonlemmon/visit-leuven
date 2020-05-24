@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import EquipmentCard from './EquipmentCard';
+import FadeIn from './FadeIn';
 import EQUIPMENT from '../data/EquipmentData';
 
 const Wrapper = styled.div`
@@ -28,20 +29,21 @@ function EquipmentSelection() {
   const getEquipment = () => {
     const equipment = [];
     EQUIPMENT.forEach(item => equipment.push(
-      <EquipmentCard key={`equipment~${item.id}`} item={item} />
+      <FadeIn>
+        <EquipmentCard key={`equipment~${item.id}`} item={item} />
+      </FadeIn>
     ))
     return equipment;
   }
   
   return (
-    <Wrapper>
+    <Wrapper id="equip">
       <Heading>
         Interested in our exciting iFit-enabled equipment?
       </Heading>
       <CardWrapper>
         { getEquipment() }
       </CardWrapper>
-
     </Wrapper>
   );
 }

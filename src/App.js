@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
 function App() {
   return (
-    <Wrapper>
+    <Wrapper id="content">
       <Reset />
       <GlobalStyle />
       <Main />
