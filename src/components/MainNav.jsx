@@ -12,7 +12,21 @@ const Wrapper = styled.div`
   padding-left: 40px;
   padding-right: 23px;
   background: #fff;
-  border-bottom: 1px solid #d5d6d6;
+  border-bottom: 0.5px solid #d5d6d6;
+  border-top: 1px solid #d5d6d6;
+  transition: transform 550ms;
+  transform: translateY(0);
+  ${props => {
+    if (props.isHeroVisible) {
+      return `
+        transform: translateY(0);
+      `;
+    } else {
+      return `
+        transform: translateY(-48px);
+      `;
+    }
+  }}
 `;
 
 const Logo = styled.img`
@@ -43,9 +57,9 @@ const SignUp = styled(Button)`
   }
 `;
 
-function MainNav() {
+function MainNav(props) {
   return (
-    <Wrapper>
+    <Wrapper isHeroVisible={props.isHeroVisible}>
       <Link to="#">
         <Logo src={`${process.env.PUBLIC_URL}/img/Group 13 Copy.png`} alt="" />
       </Link>

@@ -57,7 +57,7 @@ const HeroButton = styled(Button)`
 
 function Hero() {
   return (
-    <Wrapper>
+    <Wrapper id="hero">
       <HeroImage src={process.env.PUBLIC_URL + '/img/gmapsinworkout.png'} alt="" />
       <HeroContentContainer>
         <HeroHeading>The best personal training, right in your own home</HeroHeading>

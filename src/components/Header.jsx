@@ -13,12 +13,12 @@ const Wrapper = styled.header`
   z-index: 100;
 `;
 
-function Header() {
+function Header(props) {
   return (
-    <Wrapper>
+    <Wrapper id="header">
       <Responsive as={Segment} minWidth={780}>
-        <ProductNav />
-        <MainNav />
+        <ProductNav isHeroVisible={props.isHeroVisible} />
+        <MainNav isHeroVisible={props.isHeroVisible} />
       </Responsive>
       <Responsive as={Segment} maxWidth={780}>
         <MobileNav />

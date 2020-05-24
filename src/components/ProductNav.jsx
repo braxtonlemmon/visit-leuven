@@ -8,7 +8,21 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   background: #FFF;
-  border-bottom: 1px solid #d5d6d6;
+  border-bottom: 0.5px solid #d5d6d6;
+  transition: transform 550ms;
+  transform: translateY(0);
+  transform: ${props => props.isHeroVisible ? 'translateY(0)' : 'translateY(-%100)'};
+  ${props => {
+    if (props.isHeroVisible) {
+      return `
+        transform: translateY(0);
+      `
+    } else {
+      return `
+        transform: translateY(-100%);
+      `
+    }
+  }}
 `;
 
 const NavButtons = styled.ul`
@@ -27,9 +41,9 @@ const NavButton = styled.li`
   }
 `;
 
-function ProductNav() {
+function ProductNav(props) {
   return (
-    <Wrapper>
+    <Wrapper isHeroVisible={props.isHeroVisible}>
       <NavButtons>
         <Link to="#">
           <NavButton>Blog</NavButton>
