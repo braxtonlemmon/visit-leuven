@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import ReviewCard from './ReviewCard';
-import REVIEWS from '../data/ReviewData';
+import ReviewCard from "./ReviewCard";
+import REVIEWS from "../data/ReviewData";
 
 const Wrapper = styled.div`
   position: relative;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
   width: 100%;
-  background: #F4F5F7;
+  background: #f4f5f7;
   overflow: hidden;
   p {
     text-align: center;
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 `;
 
 const Box = styled.div`
-  background: #FFF;
+  background: #fff;
   height: 184px;
   min-width: 320px;
   border-radius: 4px;
@@ -29,32 +29,14 @@ const Box = styled.div`
   @media (min-width: 1200px) {
     min-width: 480px;
   }
-  transition: all 0.6s linear;
-  transform: translateX(0);
-  transform: scaleX(100%);
-  ${props => {
-    if (props.isGoingRight) {
-      return `
-        transform: translateX(0);
-      `
-    }
-  }}
-
-  ${props => {
-    if (props.isGoingLeft) {
-      return `
-        transform: translateX(-100%);
-      `;
-    }
-  }}
 `;
 
 const SlideButton = styled.div`
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 2px solid #8B919E; 
-  background: rgba(0,12,40,0.79);
+  border: 2px solid #8b919e;
+  background: rgba(0, 12, 40, 0.79);
   cursor: pointer;
   position: absolute;
   display: flex;
@@ -68,7 +50,7 @@ const SlideButton = styled.div`
 
 const LeftButton = styled(SlideButton)`
   left: 16px;
-`
+`;
 
 const RightButton = styled(SlideButton)`
   right: 16px;
@@ -76,8 +58,8 @@ const RightButton = styled(SlideButton)`
 
 function ReviewSlider() {
   const [startIndex, setStartIndex] = useState(0);
-  const [isGoingRight, setGoingRight] = useState(false);
-  const [isGoingLeft, setGoingLeft] = useState(false);
+  const [cards, setCards] = useState();
+  
   // Helper function to shift index based on direction and length of REVIEWS array
   const shiftIndex = (index, direction) => {
     if (direction === "left") {
@@ -87,25 +69,14 @@ function ReviewSlider() {
     }
   };
 
-  const handleRight = () => {
-    console.log('moving right');
-    setStartIndex(shiftIndex(startIndex, 'right'));
-    setGoingRight(true);
+  const handleRightClick = () => {
+    const index = shiftIndex(startIndex, 'right');
+    setStartIndex(index);
   }
-  
-  const handleRightOver = () => {
-    console.log('doneright');
-    setGoingRight(false);
-  }
-  
-  const handleLeft = () => {
-    setGoingLeft(true);
-    setStartIndex(shiftIndex(startIndex, 'left'));
-  }
-  
-  const handleLeftOver = () => {
-    console.log('done left')
-    setGoingLeft(false);
+
+  const handleLeftClick = () => {
+    const index = shiftIndex(startIndex, 'left');
+    setStartIndex(index);
   }
 
   // Generates ReviewCard components based on shifted starting index
@@ -113,30 +84,49 @@ function ReviewSlider() {
     const firstHalf = REVIEWS.slice(startIndex);
     const secondHalf = REVIEWS.slice(0, startIndex);
     const completeList = firstHalf.concat(secondHalf);
+    console.log(completeList);
     const reviews = [];
-    completeList.forEach(review => reviews.push(
-      <Box 
-        key={`review~${review.id}`}
-        isGoingRight={isGoingRight}
-        isGoingLeft={isGoingLeft}
-      >
-        <ReviewCard review={review} />
-      </Box>
-    ));
+    completeList.forEach((review) =>
+      reviews.push(
+        <Box
+          key={`review~${review.id}`}
+        >
+          <ReviewCard 
+            key={`reviewcard~${review.id}`}
+            review={review} />
+        </Box>
+      )
+    );
     return reviews;
-  }
+  };
+
+  useEffect(() => {
+    const theCards = generateCards(startIndex);
+    setCards(theCards);
+  }, [startIndex])
 
   return (
     <Wrapper>
-      <LeftButton onMouseDown={() => handleLeft()} onMouseUp={() => handleLeftOver()}>
-        <img src={`${process.env.PUBLIC_URL}/icons/chevron_left.png`} alt="left icon" />
+      <LeftButton
+        onClick={() => handleLeftClick()}
+      >
+        <img
+          src={`${process.env.PUBLIC_URL}/icons/chevron_left.png`}
+          alt="left icon"
+        />
       </LeftButton>
-      <RightButton onMouseDown={() => handleRight()} onMouseUp={() => handleRightOver()}>
-        <img src={`${process.env.PUBLIC_URL}/icons/chevron_right.png`} alt="right icon" />
+      <RightButton
+        onClick={() => handleRightClick()}
+      >
+        <img
+          src={`${process.env.PUBLIC_URL}/icons/chevron_right.png`}
+          alt="right icon"
+        />
       </RightButton>
-      {generateCards(startIndex)}
+      {cards}
     </Wrapper>
   );
 }
 
 export default ReviewSlider;
+

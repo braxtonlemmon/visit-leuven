@@ -15,6 +15,13 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: black;
   }
+
+  button,
+  select,
+  div,
+  a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
 `;
 
 export default GlobalStyle;

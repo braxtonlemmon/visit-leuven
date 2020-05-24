@@ -27,7 +27,6 @@ const ReviewText = styled.p`
 `;
 
 function ReviewCard(props) {
-
   return (
     <Wrapper>
       <LogoContainer>

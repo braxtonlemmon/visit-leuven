@@ -4,7 +4,6 @@ import { Reset } from 'styled-reset';
 import GlobalStyle from './GlobalStyle';
 import Main from './components/Main';
 
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
