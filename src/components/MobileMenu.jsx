@@ -62,7 +62,7 @@ const Buttons = styled.div`
 const SignUp = styled(Button)`
   box-shadow: 0 1px 2px 0 rgba(45, 45, 45, 0.5);
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
   }
 `;
 
@@ -70,7 +70,7 @@ const LogIn = styled(Button)`
   background: #969799;
   box-shadow: 0 1px 2px 0 rgba(45, 45, 45, 0.5);
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
   }
 `;
 

@@ -53,7 +53,7 @@ const SignUp = styled(Button)`
   padding: 10px 19px;
   box-shadow: 0 1px 2px 0 rgba(45, 45, 45, 0.5);
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
   }
 `;
 
