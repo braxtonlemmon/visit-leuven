@@ -31,7 +31,7 @@ function ReviewCard(props) {
   return (
     <Wrapper>
       <LogoContainer>
-        <LogoImage src={props.review.imgUrl} alt="" />
+        <LogoImage src={props.review.imgUrl} alt={`${props.review.author} logo`} />
       </LogoContainer>
       <ReviewText>
         "{props.review.content}"

@@ -30,7 +30,7 @@ function EquipmentCard(props) {
   return (
     <Wrapper>
       <Link to='#'>
-        <Image src={props.item.imgUrl} alt="" />
+        <Image src={props.item.imgUrl} alt={props.item.name} />
         <Title>{props.item.name}</Title> 
     </Link>
     </Wrapper>

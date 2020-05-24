@@ -66,7 +66,7 @@ function MobileNav(props) {
         </div>
       </MenuButton>
       <Link to="#">
-        <Logo src={`${process.env.PUBLIC_URL}/img/Group 13 Copy.png`} alt="" />
+        <Logo src={`${process.env.PUBLIC_URL}/img/Group 13 Copy.png`} alt="iFit logo" />
       </Link>
     </Wrapper>
   );

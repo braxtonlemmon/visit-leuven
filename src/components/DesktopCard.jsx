@@ -106,13 +106,13 @@ function DesktopCard(props) {
   return (
     <Wrapper>
       <ImageBox>
-        <Image src={props.item.imgUrl} alt="" />
+        <Image src={props.item.imgUrl} alt={props.item.alt} />
         {
           props.item.workouts &&
           <WorkoutLayer>
             <p className="number">{props.item.workouts}</p>
             <p className="workouts">Workouts</p>
-            <img src={`${process.env.PUBLIC_URL}/icons/icn_playlist copy 3.png`} alt=""/>
+            <img src={`${process.env.PUBLIC_URL}/icons/icn_playlist copy 3.png`} alt="playlist icon"/>
           </WorkoutLayer>
         }
       </ImageBox>
@@ -122,13 +122,13 @@ function DesktopCard(props) {
           <div className="statistic-box">
             {props.item.time && 
               <>
-                <img className="stat-icon" src={`${process.env.PUBLIC_URL}/icons/icn_timer_line.png`} alt="" />
+                <img className="stat-icon" src={`${process.env.PUBLIC_URL}/icons/icn_timer_line.png`} alt="timer icon" />
                 <p>{props.item.time}</p>
               </>  
             }
             {props.item.amount &&
              <>
-               <img className="stat-icon" src={`${process.env.PUBLIC_URL}/icons/icn_distance_line.png`} alt="" />
+               <img className="stat-icon" src={`${process.env.PUBLIC_URL}/icons/icn_distance_line.png`} alt="distance icon" />
                <p>{props.item.amount}</p>
              </>
             }       

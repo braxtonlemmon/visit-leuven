@@ -66,27 +66,27 @@ function Footer() {
         <ul>
           <li>
             <a href="https://www.youtube.com/user/iFitLive">
-              <img src={`${process.env.PUBLIC_URL}/icons/social_media/youtube.png`} alt="" />
+              <img src={`${process.env.PUBLIC_URL}/icons/social_media/youtube.png`} alt="youtube icon" />
             </a>
           </li>
           <li>
             <a href="https://pinterest.com/ifit">
-              <img src={`${process.env.PUBLIC_URL}/icons/social_media/pinterest.png`} alt="" />
+              <img src={`${process.env.PUBLIC_URL}/icons/social_media/pinterest.png`} alt="pinterest icon" />
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/ifit">
-              <img src={`${process.env.PUBLIC_URL}/icons/social_media/facebook.png`} alt="" />
+              <img src={`${process.env.PUBLIC_URL}/icons/social_media/facebook.png`} alt="facebook icon" />
             </a>
           </li>
           <li>
             <a href="https://twitter.com/ifit">
-              <img src={`${process.env.PUBLIC_URL}/icons/social_media/twitter.png`} alt="" />
+              <img src={`${process.env.PUBLIC_URL}/icons/social_media/twitter.png`} alt="twitter icon" />
             </a>
           </li>
           <li>
             <a href="https://instagram.com/ifit">
-              <img src={`${process.env.PUBLIC_URL}/icons/social_media/instagram.png`} alt="" />
+              <img src={`${process.env.PUBLIC_URL}/icons/social_media/instagram.png`} alt="instagram icon" />
             </a>
           </li>
         </ul>

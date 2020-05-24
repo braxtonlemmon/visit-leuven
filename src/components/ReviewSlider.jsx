@@ -129,10 +129,10 @@ function ReviewSlider() {
   return (
     <Wrapper>
       <LeftButton onMouseDown={() => handleLeft()} onMouseUp={() => handleLeftOver()}>
-        <img src={`${process.env.PUBLIC_URL}/icons/chevron_left.png`} alt="" />
+        <img src={`${process.env.PUBLIC_URL}/icons/chevron_left.png`} alt="left icon" />
       </LeftButton>
       <RightButton onMouseDown={() => handleRight()} onMouseUp={() => handleRightOver()}>
-        <img src={`${process.env.PUBLIC_URL}/icons/chevron_right.png`} alt="" />
+        <img src={`${process.env.PUBLIC_URL}/icons/chevron_right.png`} alt="right icon" />
       </RightButton>
       {generateCards(startIndex)}
     </Wrapper>
