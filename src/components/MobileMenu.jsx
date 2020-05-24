@@ -51,9 +51,9 @@ const SiteItem = styled.li`
 const Buttons = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
   gap: 20px;
   margin: 10px 20px;
-  justify-self: flex-end;
 `;
 
 const SignUp = styled(Button)`
@@ -100,8 +100,12 @@ function MobileMenu() {
         </Link>
       </NavList>
       <Buttons>
-        <SignUp>Sign Up</SignUp>
-        <LogIn>Log In</LogIn>
+        <Link to="#">
+          <SignUp>Sign Up</SignUp>
+        </Link>
+        <Link to="#">
+          <LogIn>Log In</LogIn>
+        </Link>
       </Buttons>
     </Wrapper>
   )

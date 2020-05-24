@@ -24,67 +24,31 @@ const MenuButton = styled.div`
   align-items: center;
   cursor: pointer;
   .icon {
-    background: yellow;
-    width: 28px;
-    height: 28px;
-    position: relative;
-    transform: rotate(0deg);
-    transition: transform 0.5s ease-in-out;
-  }
-  .icon span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: rgba(46, 49, 52, 0.8);
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: transform 1s ease-in-out;
-    will-change: transform;
-  }
-  .icon span:nth-child(1) {
-    top: 4px;
-    transform-origin: left center;
-    ${props => {
-      if (props.viewMenu) {
-        return `
-          transform: rotate(45deg);
-          // top: -3px;
-          // left: 8px;
-        `;
-      }
-    }}
-  }
-  .icon span:nth-child(2) {
-    top: 12px;
-    transform-origin: left center;
-    ${props => {
-      if (props.viewMenu) {
-        return `
-          width: 0%;
-          opacity: 0%;
-        `;
-      }
-    }}
-  }
-  .icon span:nth-child(3) {
-    top: 20px;
-    transform-origin: left center;
-    ${props => {
-      if (props.viewMenu) {
-        return `
-          transform: rotate(-45deg);
-        `;
-      }
-    }}
-  }
-`;
+    display: inline-block;
+    .line1,
+    .line2,
+    .line3 {
+      margin: 6px 0;
+      height: 2px;
+      width: 35px;
+      background: rgba(46, 49, 52, 0.8);
+      transition: transform 0.4s ease;
+    }
 
-const Line = styled.div`
-  height: 2px;
-  width: 100%;
-  background-color: rgba(46, 49, 52, 0.8);
+    .view.line1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .view.line2 {
+      opacity: 0;
+    }
+
+    .view.line3 {
+      -webkit-transform: rotate(45deg) translate(-4px, -8px);
+      transform: rotate(45deg) translate(-4px, -8px);
+    }
+  }
 `;
 
 const Logo = styled.img``;
@@ -97,9 +61,9 @@ function MobileNav(props) {
         viewMenu={props.viewMenu}
       >
         <div className="icon">
-          <span></span>
-          <span></span>
-          <span></span>
+          <div className={props.viewMenu ? 'line1 view' : 'line1'}></div>
+          <div className={props.viewMenu ? 'line2 view' : 'line2'}></div>
+          <div className={props.viewMenu ? 'line3 view' : 'line3'}></div>
         </div>
       </MenuButton>
       <Link to="#">
