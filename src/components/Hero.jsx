@@ -2,11 +2,9 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import FadeIn from './shared/FadeIn';
 import Button from './shared/Button';
+import wrapper from './shared/Wrapper';
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const Wrapper = styled(wrapper)`
   width: 100%;
   position: relative;
   margin-top: 57px;

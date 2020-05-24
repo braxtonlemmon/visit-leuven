@@ -87,7 +87,6 @@ function ReviewSlider() {
     const firstHalf = REVIEWS.slice(startIndex);
     const secondHalf = REVIEWS.slice(0, startIndex);
     const completeList = firstHalf.concat(secondHalf);
-    console.log(completeList);
     const reviews = [];
     completeList.forEach((review) =>
       reviews.push(

@@ -3,13 +3,7 @@ import styled from "styled-components";
 import EquipmentCard from './EquipmentCard';
 import FadeIn from './shared/FadeIn';
 import EQUIPMENT from '../data/EquipmentData';
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+import Wrapper from './shared/Wrapper';
 
 const CardWrapper = styled.div`
   display: flex;

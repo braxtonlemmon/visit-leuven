@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import wrapper from './shared/Wrapper';
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const Wrapper = styled(wrapper)`
   height: 330px;
   width: 330px;
   margin: 12px;

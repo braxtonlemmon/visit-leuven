@@ -1,18 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import wrapper from './shared/Wrapper';
 
-const Wrapper = styled.div`
+const Wrapper = styled(wrapper)`
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   padding: 15px 23px 15px 40px;
   background: #fff;
   border-bottom: 1px solid #d5d6d6;
 `;
-
 
 const MenuButton = styled.div`
   position: absolute;
@@ -35,15 +32,12 @@ const MenuButton = styled.div`
       transition: transform 0.4s ease;
       transform-origin: top left;
     }
-
     .view.line1 {
       transform: rotate(28deg);
     }
-
     .view.line2 {
       opacity: 0;
     }
-
     .view.line3 {
       transform: rotate(-28deg);
     }

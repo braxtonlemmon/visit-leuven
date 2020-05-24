@@ -8,13 +8,10 @@ import {
   Language,
   Legal
 } from './FooterStyling';
+import wrapper from './shared/Wrapper';
 
-const Wrapper = styled.div`
-  display: flex;
+const Wrapper = styled(wrapper)`
   position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   background-color: #2E3134;
   padding-top: 48px;
