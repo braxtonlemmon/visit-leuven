@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Responsive, Segment } from 'semantic-ui-react';
-
 import ReviewCard from './ReviewCard';
 import REVIEWS from '../data/ReviewData';
 
 const Wrapper = styled.div`
   position: relative;
-  display: grid;
-  grid-template-columns: 12px 1fr 12px;
-  /* grid-template-columns: 12px 1fr 1fr 1fr 12px; */
+  display: flex;
   gap: 12px;
   justify-content: center;
   align-items: center;
@@ -17,23 +13,22 @@ const Wrapper = styled.div`
   padding-bottom: 24px;
   width: 100%;
   background: #F4F5F7;
+  overflow: hidden;
   p {
     text-align: center;
-  }
-  @media (min-width: 780px) {
-    grid-template-columns: 12px 1fr 1fr 12px;
-  }
-  @media (min-width: 1200px) {
-    grid-template-columns: 12px 1fr 1fr 1fr 12px;
   }
 `;
 
 const Box = styled.div`
   background: #FFF;
   height: 184px;
-  width: 100%;
+  min-width: 320px;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
+  margin: 0 6px;
+  @media (min-width: 1200px) {
+    min-width: 480px;
+  }
 `;
 
 const SlideButton = styled.div`
@@ -61,76 +56,48 @@ const RightButton = styled(SlideButton)`
 `;
 
 function ReviewSlider() {
-  const [reviews, setReviews] = useState({
-    prev: REVIEWS.length - 1,
-    A: 0,
-    B: 1,
-    C: 2,
-    next: 1
-  });
-
-  // useEffect(() => {
-  //   const max = REVIEWS.length - 1;
-  //   const currentReviews = [];
-
-  //   // if 2 less than max, 3 consecutive indices
-  //   if (max - reviewIndex >= 2) {
-  //     for (let i = reviewIndex; i < 3; i++) {
-  //       currentReviews.push(REVIEWS[i]);
-  //     }
-  //   // if 1 less than max, 2 consecutive and 0
-  //   } else if (max - reviewIndex === 1) {
-  //     currentReviews.push(REVIEWS[reviewIndex]);
-  //     currentReviews.push(REVIEWS[reviewIndex + 1]);
-  //     currentReviews.push(REVIEWS[0]);
-  //   // if max, max and 0 1
-  //   } else if (reviewIndex === max) {
-  //     currentReviews.push(REVIEWS[reviewIndex]);
-  //     currentReviews.push(REVIEWS[0]);
-  //     currentReviews.push(REVIEWS[1]);
-  //   }
-  //   setReviews(currentReviews);
-  // }, [reviewIndex])
-
-  // useEffect(() => {
-  //   const currentReviews = [];
-  //   const indices = [0, 1, 2];
-  //   indices.forEach(index => currentReviews.push(REVIEWS[index]));
-    
-  // })
-  // reviews.forEach(review => reviews.push(
-  //     <ReviewCard key={`review~${review.id}`} review={review} />
-  //   ));
+  const [startIndex, setStartIndex] = useState(0);
   
   // Helper function to shift index based on direction and length of REVIEWS array
-  
   const shiftIndex = (index, direction) => {
-    if (direction === 'left') {
-      return index > 0 ? index - 1 : REVIEWS.length - 1;
-    } 
-    else if (direction === 'right') {
+    if (direction === "left") {
       return index < REVIEWS.length - 1 ? index + 1 : 0;
+    } else if (direction === "right") {
+      return index > 0 ? index - 1 : REVIEWS.length - 1;
     }
+  };
+
+  const handleRight = () => {
+    setStartIndex(shiftIndex(startIndex, 'right'));
   }
   
+  const handleLeft = () => {
+    setStartIndex(shiftIndex(startIndex, 'left'));
+  }
+
+  // Generates ReviewCard components based on shifted starting index
+  const generateCards = (startIndex) => {
+    const firstHalf = REVIEWS.slice(startIndex);
+    const secondHalf = REVIEWS.slice(0, startIndex);
+    const completeList = firstHalf.concat(secondHalf);
+    const reviews = [];
+    completeList.forEach(review => reviews.push(
+      <Box>
+        <ReviewCard review={review} />
+      </Box>
+    ));
+    return reviews;
+  }
+
   return (
     <Wrapper>
-      <LeftButton>
+      <LeftButton onClick={() => handleLeft()}>
         <img src={`${process.env.PUBLIC_URL}/icons/chevron_left.png`} alt="" />
       </LeftButton>
-      <RightButton>
+      <RightButton onClick={() => handleRight()}>
         <img src={`${process.env.PUBLIC_URL}/icons/chevron_right.png`} alt="" />
       </RightButton>
-
-      <Box></Box>
-      <Box><ReviewCard review={REVIEWS[reviews.A]} /></Box>
-      <Responsive as={Segment} minWidth={780}>
-        <Box><ReviewCard review={REVIEWS[reviews.B]} /></Box>
-      </Responsive>
-      <Responsive as={Segment} minWidth={1200}>
-        <Box><ReviewCard review={REVIEWS[reviews.C]} /></Box>
-      </Responsive>
-      <Box></Box>
+      {generateCards(startIndex)}
     </Wrapper>
   );
 }

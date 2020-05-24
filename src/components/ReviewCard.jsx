@@ -7,10 +7,8 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 40px;
-
   height: 100%;
   width: 100%;
-
 `;
 
 const LogoContainer = styled.div`
