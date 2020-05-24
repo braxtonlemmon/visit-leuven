@@ -7,7 +7,6 @@ import ReviewSlider from './ReviewSlider';
 import DesktopLibrary from './DesktopLibrary'
 import EquipmentSelection from './EquipmentSelection';
 import Footer from './Footer';
-import { Responsive, Segment } from 'semantic-ui-react';
 
 function Main() {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
@@ -36,7 +35,7 @@ function Main() {
       window.addEventListener('scroll', handleScroll);
     }
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [])
+  }, [isLoaded])
 
   if (isLoaded && viewMenu) {
     return (

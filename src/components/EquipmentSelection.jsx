@@ -29,7 +29,7 @@ function EquipmentSelection() {
   const getEquipment = () => {
     const equipment = [];
     EQUIPMENT.forEach(item => equipment.push(
-      <FadeIn>
+      <FadeIn key={`equipment-fade~${item.id}`}>
         <EquipmentCard key={`equipment~${item.id}`} item={item} />
       </FadeIn>
     ))

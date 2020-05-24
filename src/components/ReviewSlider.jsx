@@ -44,6 +44,12 @@ const SlideButton = styled.div`
   background: rgba(0,12,40,0.79);
   cursor: pointer;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const LeftButton = styled(SlideButton)`
@@ -55,8 +61,13 @@ const RightButton = styled(SlideButton)`
 `;
 
 function ReviewSlider() {
-  const [reviews, setReviews] = useState([]);
-  const [reviewIndex, setReviewIndex] = useState(0);
+  const [reviews, setReviews] = useState({
+    prev: REVIEWS.length - 1,
+    A: 0,
+    B: 1,
+    C: 2,
+    next: 1
+  });
 
   // useEffect(() => {
   //   const max = REVIEWS.length - 1;
@@ -90,23 +101,37 @@ function ReviewSlider() {
   // reviews.forEach(review => reviews.push(
   //     <ReviewCard key={`review~${review.id}`} review={review} />
   //   ));
-
+  
+  // Helper function to shift index based on direction and length of REVIEWS array
+  
+  const shiftIndex = (index, direction) => {
+    if (direction === 'left') {
+      return index > 0 ? index - 1 : REVIEWS.length - 1;
+    } 
+    else if (direction === 'right') {
+      return index < REVIEWS.length - 1 ? index + 1 : 0;
+    }
+  }
   
   return (
     <Wrapper>
-      <LeftButton></LeftButton>
-      <RightButton></RightButton>
-      
+      <LeftButton>
+        <img src={`${process.env.PUBLIC_URL}/icons/chevron_left.png`} alt="" />
+      </LeftButton>
+      <RightButton>
+        <img src={`${process.env.PUBLIC_URL}/icons/chevron_right.png`} alt="" />
+      </RightButton>
+
       <Box></Box>
-      <Box></Box>
-      <Box></Box>
+      <Box><ReviewCard review={REVIEWS[reviews.A]} /></Box>
       <Responsive as={Segment} minWidth={780}>
-        <Box></Box>
+        <Box><ReviewCard review={REVIEWS[reviews.B]} /></Box>
       </Responsive>
       <Responsive as={Segment} minWidth={1200}>
-        <Box></Box>
+        <Box><ReviewCard review={REVIEWS[reviews.C]} /></Box>
       </Responsive>
-      </Wrapper>
+      <Box></Box>
+    </Wrapper>
   );
 }
 

@@ -6,18 +6,22 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  padding: 0 40px;
+
+  height: 100%;
+  width: 100%;
+
 `;
 
 const LogoContainer = styled.div`
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 24px;
-  width: 100px;
+  margin-bottom: 16px;
 `;
 
 const LogoImage = styled.img`
-  height: 24px;
-  width: 100px;
 `;
 
 const ReviewText = styled.p`
@@ -29,11 +33,10 @@ function ReviewCard(props) {
   return (
     <Wrapper>
       <LogoContainer>
-        ok
-        <LogoImage src={props.review.imgUrl} alt=""></LogoImage>
+        <LogoImage src={props.review.imgUrl} alt="" />
       </LogoContainer>
       <ReviewText>
-        {props.review.content}
+        "{props.review.content}"
       </ReviewText>
     </Wrapper>
   )

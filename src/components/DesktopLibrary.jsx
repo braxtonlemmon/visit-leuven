@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  max-width: 1300px;
 `;
 
 function DesktopLibrary() {
