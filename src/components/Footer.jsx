@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -126,6 +127,13 @@ const Language = styled.div`
     color: black;
     padding: 5px;
   }
+  @media (min-width: 780px) {
+    position: absolute;
+    width: 200px;
+    left: 40px;
+    border: none;
+    bottom: 15px;
+  }
 `;
 
 const Legal = styled.div`
@@ -225,30 +233,27 @@ function Footer() {
         
        
       </SocialMedia>
-      
-      {/* <Misc> */}
-        <Language>
-          <select name="language" id="language">
-            <option value="english">English</option>
-            <option value="french">French</option>
-            <option value="spanish">Spanish</option>
-            <option value="german">German</option>
-            <option value="dutch">Dutch</option>
-            <option value="polish">Polish</option> 
-          </select>
-        </Language>
-        <Legal>
-          <div className="legal-links">
-            <Link to='#'>
-              <p>Privacy Policy</p>
-            </Link>
-            <Link to='#'>
-              <p>Terms of Use</p>
-            </Link>
-          </div>
-          <p>© iFit.com. All Rights Reserved.</p>
-        </Legal>
-      {/* </Misc> */}
+      <Language>
+        <select name="language" id="language">
+          <option value="english">English</option>
+          <option value="french">French</option>
+          <option value="spanish">Spanish</option>
+          <option value="german">German</option>
+          <option value="dutch">Dutch</option>
+          <option value="polish">Polish</option> 
+        </select>
+      </Language>
+      <Legal>
+        <div className="legal-links">
+          <Link to='#'>
+            <p>Privacy Policy</p>
+          </Link>
+          <Link to='#'>
+            <p>Terms of Use</p>
+          </Link>
+        </div>
+        <p>© iFit.com. All Rights Reserved.</p>
+      </Legal>
     </Wrapper>
   );
 }
