@@ -1,16 +1,57 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Responsive, Segment } from 'semantic-ui-react';
+
 import ReviewCard from './ReviewCard';
 import REVIEWS from '../data/ReviewData';
 
 const Wrapper = styled.div`
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 12px 1fr 12px;
+  /* grid-template-columns: 12px 1fr 1fr 1fr 12px; */
+  gap: 12px;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   width: 100%;
-  background: pink;
+  background: #F4F5F7;
+  p {
+    text-align: center;
+  }
+  @media (min-width: 780px) {
+    grid-template-columns: 12px 1fr 1fr 12px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 12px 1fr 1fr 1fr 12px;
+  }
+`;
+
+const Box = styled.div`
+  background: #FFF;
+  height: 184px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
+`;
+
+const SlideButton = styled.div`
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #8B919E; 
+  background: rgba(0,12,40,0.79);
+  cursor: pointer;
+  position: absolute;
+`;
+
+const LeftButton = styled(SlideButton)`
+  left: 16px;
+`
+
+const RightButton = styled(SlideButton)`
+  right: 16px;
 `;
 
 function ReviewSlider() {
@@ -53,8 +94,19 @@ function ReviewSlider() {
   
   return (
     <Wrapper>
-      reviews
-    </Wrapper>
+      <LeftButton></LeftButton>
+      <RightButton></RightButton>
+      
+      <Box></Box>
+      <Box></Box>
+      <Box></Box>
+      <Responsive as={Segment} minWidth={780}>
+        <Box></Box>
+      </Responsive>
+      <Responsive as={Segment} minWidth={1200}>
+        <Box></Box>
+      </Responsive>
+      </Wrapper>
   );
 }
 
