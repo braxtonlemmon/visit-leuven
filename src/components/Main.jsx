@@ -54,7 +54,9 @@ function Main() {
           handleMenuClick={handleMenuClick}
           viewMenu={viewMenu}
         />
-        <Hero />
+        <Hero 
+          isHeroVisible={isHeroVisible}
+        />
         <ReviewSlider />
         <DesktopLibrary />
         <EquipmentSelection />

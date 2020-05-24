@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import FadeIn from './FadeIn';
 import Button from './shared/Button';
 
 const Wrapper = styled.div`
@@ -29,7 +30,16 @@ const HeroContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  /* background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 `;
 
 const HeroHeading = styled.h1`
@@ -38,6 +48,7 @@ const HeroHeading = styled.h1`
   line-height: 1.2em;
   color: #FFF;
   text-align: center;
+  animation: ${fadeIn} 1s ease-in forwards;
   @media (min-width: 780px) {
     font-size: 3em;
   }
@@ -55,12 +66,14 @@ const HeroButton = styled(Button)`
   }
 `;
 
-function Hero() {
+function Hero(props) {
   return (
     <Wrapper id="hero">
-      <HeroImage src={process.env.PUBLIC_URL + '/img/gmapsinworkout.png'} alt="" />
+      <HeroImage src={process.env.PUBLIC_URL + '/img/hero.webp'} alt="" />
       <HeroContentContainer>
-        <HeroHeading>The best personal training, right in your own home</HeroHeading>
+        <FadeIn>
+          <HeroHeading isHeroVisible={props.isHeroVisible}>The best personal training, right in your own home</HeroHeading>
+        </FadeIn>
         <HeroButton>Join iFit Coach</HeroButton>
       </HeroContentContainer>
     </Wrapper>

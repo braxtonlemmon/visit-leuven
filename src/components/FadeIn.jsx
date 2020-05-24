@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const FadeSection = styled.div`
   opacity: 0;
-  transition: opacity 1.8s ease-in;
+  transition: opacity 2s ease-in;
   will-change: opacity;
   ${props => {
     if (props.isVisible) {
