@@ -29,6 +29,24 @@ const Box = styled.div`
   @media (min-width: 1200px) {
     min-width: 480px;
   }
+  transition: all 0.6s linear;
+  transform: translateX(0);
+  transform: scaleX(100%);
+  ${props => {
+    if (props.isGoingRight) {
+      return `
+        transform: translateX(-100%);
+      `
+    }
+  }}
+
+  ${props => {
+    if (props.isGoingLeft) {
+      return `
+
+      `;
+    }
+  }}
 `;
 
 const SlideButton = styled.div`
@@ -45,6 +63,7 @@ const SlideButton = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+  z-index: 20;
 `;
 
 const LeftButton = styled(SlideButton)`
@@ -57,7 +76,8 @@ const RightButton = styled(SlideButton)`
 
 function ReviewSlider() {
   const [startIndex, setStartIndex] = useState(0);
-  
+  const [isGoingRight, setGoingRight] = useState(false);
+  const [isGoingLeft, setGoingLeft] = useState(false);
   // Helper function to shift index based on direction and length of REVIEWS array
   const shiftIndex = (index, direction) => {
     if (direction === "left") {
@@ -68,11 +88,24 @@ function ReviewSlider() {
   };
 
   const handleRight = () => {
+    console.log('moving right');
     setStartIndex(shiftIndex(startIndex, 'right'));
+    setGoingRight(true);
+  }
+  
+  const handleRightOver = () => {
+    console.log('doneright');
+    setGoingRight(false);
   }
   
   const handleLeft = () => {
+    setGoingLeft(true);
     setStartIndex(shiftIndex(startIndex, 'left'));
+  }
+  
+  const handleLeftOver = () => {
+    console.log('done left')
+    setGoingLeft(false);
   }
 
   // Generates ReviewCard components based on shifted starting index
@@ -82,7 +115,11 @@ function ReviewSlider() {
     const completeList = firstHalf.concat(secondHalf);
     const reviews = [];
     completeList.forEach(review => reviews.push(
-      <Box>
+      <Box 
+        key={`review~${review.id}`}
+        isGoingRight={isGoingRight}
+        isGoingLeft={isGoingLeft}
+      >
         <ReviewCard review={review} />
       </Box>
     ));
@@ -91,10 +128,10 @@ function ReviewSlider() {
 
   return (
     <Wrapper>
-      <LeftButton onClick={() => handleLeft()}>
+      <LeftButton onMouseDown={() => handleLeft()} onMouseUp={() => handleLeftOver()}>
         <img src={`${process.env.PUBLIC_URL}/icons/chevron_left.png`} alt="" />
       </LeftButton>
-      <RightButton onClick={() => handleRight()}>
+      <RightButton onMouseDown={() => handleRight()} onMouseUp={() => handleRightOver()}>
         <img src={`${process.env.PUBLIC_URL}/icons/chevron_right.png`} alt="" />
       </RightButton>
       {generateCards(startIndex)}

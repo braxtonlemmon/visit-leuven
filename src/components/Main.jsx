@@ -16,26 +16,25 @@ function Main() {
   const handleMenuClick = () => {
     viewMenu ? setViewMenu(false) : setViewMenu(true);
   }
-
-  const handleScroll = () => {
-    const hero = document.getElementById('hero').getBoundingClientRect();
-    if (hero.bottom < 127 && isHeroVisible) {
-      setIsHeroVisible(false);
-    } else if (hero.bottom > 127) {
-      setIsHeroVisible(true);
-    }
-  }
-
+  
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
+  
   useEffect(() => {
+    const handleScroll = () => {
+      const hero = document.getElementById('hero').getBoundingClientRect();
+      if (hero.bottom < 127 && isHeroVisible) {
+        setIsHeroVisible(false);
+      } else if (hero.bottom > 127) {
+        setIsHeroVisible(true);
+      }
+    }
     if (isLoaded) {
       window.addEventListener('scroll', handleScroll);
     }
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isLoaded])
+  }, [isLoaded, isHeroVisible])
 
   if (isLoaded && viewMenu) {
     return (

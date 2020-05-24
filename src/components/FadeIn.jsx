@@ -21,7 +21,6 @@ function FadeIn(props) {
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        console.log(entry);
         setVisible(entry.isIntersecting)
       });
     });
