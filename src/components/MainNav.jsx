@@ -61,7 +61,7 @@ function MainNav(props) {
   return (
     <Wrapper isHeroVisible={props.isHeroVisible}>
       <Link to="#">
-        <Logo src={`${process.env.PUBLIC_URL}/img/Group 13 Copy.png`} alt="iFit logo" />
+        <Logo src={`${process.env.PUBLIC_URL}/img/ifit-coach-logo.png`} alt="iFit logo" />
       </Link>
       <NavLinks>
         <Link to="#">

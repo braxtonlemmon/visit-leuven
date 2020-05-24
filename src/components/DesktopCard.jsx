@@ -112,7 +112,7 @@ function DesktopCard(props) {
           <WorkoutLayer>
             <p className="number">{props.item.workouts}</p>
             <p className="workouts">Workouts</p>
-            <img src={`${process.env.PUBLIC_URL}/icons/icn_playlist copy 3.png`} alt="playlist icon"/>
+            <img src={`${process.env.PUBLIC_URL}/icons/playlist.png`} alt="playlist icon"/>
           </WorkoutLayer>
         }
       </ImageBox>

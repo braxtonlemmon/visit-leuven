@@ -59,13 +59,16 @@ function MobileNav(props) {
         viewMenu={props.viewMenu}
       >
         <div className="icon">
-          <div className={props.viewMenu ? 'line1 view' : 'line1'}></div>
-          <div className={props.viewMenu ? 'line2 view' : 'line2'}></div>
-          <div className={props.viewMenu ? 'line3 view' : 'line3'}></div>
+          <div className={props.viewMenu ? "line1 view" : "line1"}></div>
+          <div className={props.viewMenu ? "line2 view" : "line2"}></div>
+          <div className={props.viewMenu ? "line3 view" : "line3"}></div>
         </div>
       </MenuButton>
       <Link to="#">
-        <Logo src={`${process.env.PUBLIC_URL}/img/Group 13 Copy.png`} alt="iFit logo" />
+        <Logo
+          src={`${process.env.PUBLIC_URL}/img/ifit-coach-logo.png`}
+          alt="iFit logo"
+        />
       </Link>
     </Wrapper>
   );

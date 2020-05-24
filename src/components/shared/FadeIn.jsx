@@ -14,6 +14,7 @@ const FadeSection = styled.div`
   }}
 `;
 
+// Component wrapper that fades in child component when in view after scroll or load
 function FadeIn(props) {
   const [isVisible, setVisible] = useState(true);
   const domRef = useRef();
