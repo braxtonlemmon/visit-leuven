@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   background: #fff;
   border-bottom: 0.5px solid #d5d6d6;
   border-top: 1px solid #d5d6d6;
-  transition: transform 550ms;
+  transition: transform 550ms ease;
   transform: translateY(0);
   ${props => {
     if (props.isHeroVisible) {
@@ -42,7 +42,7 @@ const NavLink = styled.li`
   margin: 29px 25px;
   padding-bottom: 5px;
   text-decoration: underline solid transparent;
-  transition: border-bottom 0.3s ease;
+  transition: border-bottom 550ms ease;
   border-bottom: 1px solid transparent;
   &:hover {
     border-bottom: 1px solid black; 
