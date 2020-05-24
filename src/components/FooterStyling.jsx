@@ -3,8 +3,14 @@ import styled from "styled-components";
 const SiteLinks = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
+  gap: 40px;
   padding: 10px 15px;
+  @media (min-width: 780px) {
+    gap: 60px;
+  }
+  @media (min-width: 1200px) {
+    gap: 85px;
+  }
 `;
 
 const SiteLinksCol = styled.div`
@@ -20,6 +26,7 @@ const SiteLinksCol = styled.div`
       color: #fff;
     }
   }
+  
 `;
 
 const SocialMedia = styled.div`
@@ -83,13 +90,13 @@ const Language = styled.div`
     color: black;
     padding: 5px;
   }
-  @media (min-width: 780px) {
+  @media (min-width: 900px) {
     position: absolute;
     width: 200px;
     left: 40px;
     border: none;
-    bottom: 15px;
-  }
+    bottom: 5px;
+}
 `;
 
 const Legal = styled.div`
@@ -110,6 +117,9 @@ const Legal = styled.div`
   }
   p {
     color: #fff;
+  }
+  @media (min-width: 900px) {
+    flex-direction: row-reverse;
   }
 `;
 
