@@ -3,7 +3,11 @@ import styled from "styled-components";
 import EquipmentCard from './EquipmentCard';
 import FadeIn from './shared/FadeIn';
 import EQUIPMENT from '../data/EquipmentData';
-import Wrapper from './shared/Wrapper';
+import wrapper from './shared/Wrapper';
+
+const Wrapper = styled(wrapper)`
+  margin: 0 30px;
+`;
 
 const CardWrapper = styled.div`
   display: flex;
