@@ -10,6 +10,9 @@ const Wrapper = styled.div`
   height: 330px;
   width: 330px;
   margin: 12px;
+  &:hover {
+    font-weight: 550;
+  }
 `;
 
 const Image = styled.img`
