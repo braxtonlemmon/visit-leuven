@@ -66,12 +66,7 @@ const HeroButton = styled(Button)`
 function Hero(props) {
   return (
     <Wrapper id="hero">
-      {/* <HeroImage src={process.env.PUBLIC_URL + '/img/hero.webp'} alt="hero image" /> */}
-      <HeroImage
-        src={process.env.PUBLIC_URL + "/img/gmapsinworkout.png"}
-        alt="hero image"
-      />
-
+      <HeroImage src={process.env.PUBLIC_URL + '/img/hero-image.png'} alt="hero image" />
       <HeroContentContainer>
         <FadeIn>
           <HeroHeading isHeroVisible={props.isHeroVisible}>
