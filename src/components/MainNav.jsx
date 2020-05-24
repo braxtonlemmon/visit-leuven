@@ -11,6 +11,8 @@ const Wrapper = styled.div`
   font-size: 14px;
   padding-left: 40px;
   padding-right: 23px;
+  background: #fff;
+  border-bottom: 1px solid #d5d6d6;
 `;
 
 const Logo = styled.img`

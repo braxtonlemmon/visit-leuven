@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   position: relative;
+  margin-top: 57px;
+  @media (min-width: 780px) {
+    margin-top: 126px;
+  }
 `;
 
 const HeroImage = styled.img`
