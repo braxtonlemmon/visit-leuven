@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import FadeIn from './FadeIn';
+import FadeIn from './shared/FadeIn';
 import Button from './shared/Button';
 
 const Wrapper = styled.div`

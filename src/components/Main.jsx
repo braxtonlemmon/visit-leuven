@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import MobileMenu from './MobileMenu';
-import MobileNav from './MobileNav';
 import Header from './Header';
 import Hero from './Hero';
 import ReviewSlider from './ReviewSlider';

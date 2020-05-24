@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import EquipmentCard from './EquipmentCard';
-import FadeIn from './FadeIn';
+import FadeIn from './shared/FadeIn';
 import EQUIPMENT from '../data/EquipmentData';
 
 const Wrapper = styled.div`

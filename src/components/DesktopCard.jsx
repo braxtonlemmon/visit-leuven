@@ -92,13 +92,6 @@ const InfoText = styled.div`
   p {
     margin-right: 8px;
   }
-  /* p {
-    line-height: 16px;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #0069D2;
-    letter-spacing: 0.5;
-  } */
 `;
 
 const Thumbnail = styled.img`
