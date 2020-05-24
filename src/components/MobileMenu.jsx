@@ -4,17 +4,20 @@ import { Link } from 'react-router-dom';
 import Button from './shared/Button'; 
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 48px;
   bottom: 0;
   left: 0;
   right: 0;
   margin-bottom: 20px;
   background: #FFF;
-  z-index: 101;
+  z-index: 150;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow-y: hidden;
+  padding-right: 15px;
+  height: 100vh;
 `;
 
 const NavList = styled.ul`

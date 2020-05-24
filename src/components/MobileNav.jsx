@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #d5d6d6;
 `;
 
+
 const MenuButton = styled.div`
   position: absolute;
   left: 18px;
@@ -32,11 +33,11 @@ const MenuButton = styled.div`
       width: 35px;
       background: rgba(46, 49, 52, 0.8);
       transition: transform 0.4s ease;
+      transform-origin: top left;
     }
 
     .view.line1 {
-      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-      transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(28deg);
     }
 
     .view.line2 {
@@ -44,8 +45,7 @@ const MenuButton = styled.div`
     }
 
     .view.line3 {
-      -webkit-transform: rotate(45deg) translate(-4px, -8px);
-      transform: rotate(45deg) translate(-4px, -8px);
+      transform: rotate(-28deg);
     }
   }
 `;

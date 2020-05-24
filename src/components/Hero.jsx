@@ -30,7 +30,6 @@ const HeroContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
 `;
 
 const fadeIn = keyframes`

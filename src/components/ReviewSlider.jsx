@@ -35,7 +35,7 @@ const Box = styled.div`
   ${props => {
     if (props.isGoingRight) {
       return `
-        transform: translateX(-100%);
+        transform: translateX(0);
       `
     }
   }}
@@ -43,7 +43,7 @@ const Box = styled.div`
   ${props => {
     if (props.isGoingLeft) {
       return `
-
+        transform: translateX(-100%);
       `;
     }
   }}
@@ -81,9 +81,9 @@ function ReviewSlider() {
   // Helper function to shift index based on direction and length of REVIEWS array
   const shiftIndex = (index, direction) => {
     if (direction === "left") {
-      return index < REVIEWS.length - 1 ? index + 1 : 0;
-    } else if (direction === "right") {
       return index > 0 ? index - 1 : REVIEWS.length - 1;
+    } else if (direction === "right") {
+      return index < REVIEWS.length - 1 ? index + 1 : 0;
     }
   };
 

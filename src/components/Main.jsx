@@ -7,6 +7,7 @@ import ReviewSlider from './ReviewSlider';
 import DesktopLibrary from './DesktopLibrary'
 import EquipmentSelection from './EquipmentSelection';
 import Footer from './Footer';
+import { Responsive, Segment } from 'semantic-ui-react';
 
 function Main() {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
@@ -34,36 +35,30 @@ function Main() {
       window.addEventListener('scroll', handleScroll);
     }
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isLoaded, isHeroVisible])
+  }, [isLoaded])
 
-  if (isLoaded && viewMenu) {
-    return (
-      <>
-        <MobileNav 
+  return(
+    <>
+      <Header
+          isHeroVisible={isHeroVisible}
           handleMenuClick={handleMenuClick}
           viewMenu={viewMenu}
-        />
+      />
+      { viewMenu &&
+      <Responsive as={Segment} maxWidth={780} >
         <MobileMenu />
-      </>
-    )
-  } else {
-    return (
-      <>
-        <Header 
-          isHeroVisible={isHeroVisible}
-          handleMenuClick={handleMenuClick}
-          viewMenu={viewMenu}
-        />
-        <Hero 
-          isHeroVisible={isHeroVisible}
-        />
-        <ReviewSlider />
-        <DesktopLibrary />
-        <EquipmentSelection />
-        <Footer />
-      </>
-    )
-  }
+      </Responsive>
+      } 
+      <Hero 
+        isHeroVisible={isHeroVisible}
+      />
+      <ReviewSlider />
+      <DesktopLibrary />
+      <EquipmentSelection />
+      <Footer />
+
+    </>
+  )
 }
 
 export default Main;
