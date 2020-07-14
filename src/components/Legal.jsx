@@ -19,7 +19,7 @@ const LegalWrapper = styled.div`
     }
   }
   p {
-    color: #fff;
+    color: ${props => props.theme.colors.light};
   }
   @media (min-width: 900px) {
     flex-direction: row-reverse;

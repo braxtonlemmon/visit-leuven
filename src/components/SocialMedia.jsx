@@ -6,8 +6,8 @@ const SocialWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid #585a5d;
-  border-bottom: 2px solid #585a5d;
+  border-top: 2px solid ${props => props.theme.colors.pale};
+  border-bottom: 2px solid ${props => props.theme.colors.pale};
   ul {
     display: flex;
   }
@@ -15,7 +15,7 @@ const SocialWrapper = styled.div`
     height: 44px;
     width: 44px;
     margin: 16px;
-    background-image: linear-gradient(to bottom right, #0069d2, #28e1a5);
+    background: ${props => props.theme.colors.light};
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ const SocialWrapper = styled.div`
   img {
     margin: 2px;
     padding: 7px;
-    background-color: #2e3134;
+    background-color: ${props => props.theme.colors.dark};
     border-radius: 50%;
   }
 `;

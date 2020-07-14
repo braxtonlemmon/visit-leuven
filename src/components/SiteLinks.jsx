@@ -21,10 +21,10 @@ const SiteLinksCol = styled.div`
   }
   li {
     margin-bottom: 16px;
-    color: rgba(255, 255, 255, 0.73);
+    color: ${props => props.theme.colors.pale};
     letter-spacing: 0.3;
     &:hover {
-      color: #fff;
+      color: ${props => props.theme.colors.light};
     }
   }
 `;
@@ -33,7 +33,7 @@ function SiteLinks() {
   return (
     <SiteLinksWrapper>
       <SiteLinksCol>
-        <h4>Company</h4>
+        <h4>Organization</h4>
         <ul>
           <Link to="#">
             <li>About</li>
@@ -58,13 +58,19 @@ function SiteLinks() {
         </ul>
       </SiteLinksCol>
       <SiteLinksCol>
-        <h4>Support</h4>
+        <h4>Site</h4>
         <ul>
           <Link to="#">
-            <li>Help Center</li>
+            <li>City</li>
           </Link>
           <Link to="#">
-            <li>Accessibility</li>
+            <li>Nature</li>
+          </Link>
+          <Link to="#">
+            <li>Eat & Drink</li>
+          </Link>
+          <Link to="#">
+            <li>Entertainment</li>
           </Link>
         </ul>
       </SiteLinksCol>

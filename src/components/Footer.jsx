@@ -9,9 +9,9 @@ import Legal from './Legal';
 const Wrapper = styled(wrapper)`
   position: relative;
   width: 100%;
-  background-color: #2E3134;
+  background-color: ${props => props.theme.colors.dark};
   padding-top: 48px;
-  color: #FFF;
+  color: ${props => props.theme.colors.light};
 `;
 
 function Footer() {
