@@ -7,8 +7,10 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  background: #FFF;
-  border-bottom: 0.5px solid #d5d6d6;
+  height: 50px;
+  background: ${props => props.theme.colors.pale};
+  color: ${props => props.theme.colors.dark};
+  /* border-bottom: 0.5px solid #d5d6d6; */
   transition: transform 550ms ease;
   transform: translateY(0);
   transform: ${props => props.isHeroVisible ? 'translateY(0)' : 'translateY(-%100)'};
@@ -23,6 +25,12 @@ const Wrapper = styled.div`
       `
     }
   }}
+  p {
+    font-size: 2em;
+    margin: 0 auto;
+    letter-spacing: 12px;
+    padding: 10px;
+  }
 `;
 
 const NavButtons = styled.ul`
@@ -44,7 +52,8 @@ const NavButton = styled.li`
 function ProductNav(props) {
   return (
     <Wrapper isHeroVisible={props.isHeroVisible}>
-      <NavButtons>
+      <p>EXPLORE LEUVEN</p>
+      {/* <NavButtons>
         <Link to="#">
           <NavButton>Blog</NavButton>
         </Link>
@@ -54,7 +63,7 @@ function ProductNav(props) {
         <Link to="#">
           <NavButton>Shop</NavButton>
         </Link>
-      </NavButtons>
+      </NavButtons> */}
     </Wrapper>
   );
 }

@@ -8,12 +8,14 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-size: 14px;
+  font-size: 1.1em;
   padding-left: 40px;
   padding-right: 23px;
-  background: #fff;
-  border-bottom: 0.5px solid #d5d6d6;
-  border-top: 1px solid #d5d6d6;
+  padding: 16px 23px 16px 40px;
+  color: ${props => props.theme.colors.dark};
+  background: ${({theme}) => theme.colors.pop};
+  /* border-bottom: 0.5px solid #d5d6d6; */
+  /* border-top: 1px solid #d5d6d6; */
   transition: transform 550ms ease;
   transform: translateY(0);
   ${props => {
@@ -23,7 +25,7 @@ const Wrapper = styled.div`
       `;
     } else {
       return `
-        transform: translateY(-48px);
+        transform: translateY(-50px);
       `;
     }
   }}
@@ -54,8 +56,12 @@ const NavLinks = styled.ul`
 
 const NavLink = styled.li`
   text-transform: uppercase;
-  margin: 29px 25px;
-  padding-bottom: 5px;
+  /* margin: 29px 25px; */
+  padding: 5px 10px;
+  margin: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: underline solid transparent;
   transition: border-bottom 550ms ease;
   border-bottom: 1px solid transparent;
@@ -77,7 +83,7 @@ function MainNav(props) {
     <Wrapper isHeroVisible={props.isHeroVisible}>
       <Link to="#">
         <MainIcon>
-          <Logo src={`${process.env.PUBLIC_URL}/img/leuven-bike.svg`} alt="iFit logo" />
+          <Logo src={`${process.env.PUBLIC_URL}/img/bike.svg`} alt="iFit logo" />
           <MainIconText>
             <p>Explore</p>
             <p>Leuven</p>
@@ -86,19 +92,19 @@ function MainNav(props) {
       </Link>
       <NavLinks>
         <Link to="#">
-          <NavLink>Exercise</NavLink>
+          <NavLink>City</NavLink>
         </Link>
         <Link to="#">
-          <NavLink>Nutrition</NavLink>
+          <NavLink>Nature</NavLink>
         </Link>
         <Link to="#">
-          <NavLink>Activity</NavLink>
+          <NavLink>Eat & Drink</NavLink>
         </Link>
         <Link to="#">
-          <NavLink>Sleep</NavLink>
+          <NavLink>Entertainment</NavLink>
         </Link>
       </NavLinks>
-      <SignUp>Sign Up</SignUp>
+      <SignUp>Join</SignUp>
     </Wrapper>
   );
 }
