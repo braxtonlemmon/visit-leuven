@@ -29,8 +29,23 @@ const Wrapper = styled.div`
   }}
 `;
 
-const Logo = styled.img`
+const MainIcon = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+`;
 
+const Logo = styled.img`
+  height: 40px;
+`;
+
+const MainIconText = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: baseline;
+  align-items: center;
+  /* border: 1px solid black; */
+  font-size: 1.3em;
 `;
 
 const NavLinks = styled.ul`
@@ -61,7 +76,13 @@ function MainNav(props) {
   return (
     <Wrapper isHeroVisible={props.isHeroVisible}>
       <Link to="#">
-        <Logo src={`${process.env.PUBLIC_URL}/img/ifit-coach-logo.png`} alt="iFit logo" />
+        <MainIcon>
+          <Logo src={`${process.env.PUBLIC_URL}/img/leuven-bike.svg`} alt="iFit logo" />
+          <MainIconText>
+            <p>Explore</p>
+            <p>Leuven</p>
+          </MainIconText>
+        </MainIcon>
       </Link>
       <NavLinks>
         <Link to="#">

@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   body, html { 
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    font-family: 'Viga', sans-serif;
   }
 
   * {
