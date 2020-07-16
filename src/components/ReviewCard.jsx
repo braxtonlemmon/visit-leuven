@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import wrapper from './shared/Wrapper';
 
 const Wrapper = styled(wrapper)`
+  position: relative;
   padding: 0 40px;
   height: 100%;
   width: 100%;
@@ -28,12 +29,21 @@ const ReviewText = styled.p`
   font-weight: lighter;
 `;
 
+const Author = styled.p`
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-style: italic;
+`;
 function ReviewCard(props) {
   return (
     <Wrapper>
       <ReviewText>
         "{props.review.content}"
       </ReviewText>
+      <Author>
+        {props.review.author}
+      </Author>
     </Wrapper>
   )
 }
