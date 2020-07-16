@@ -5,21 +5,22 @@ import Button from './shared/Button';
 
 const Wrapper = styled.div`
   position: fixed;
-  top: 70px;
+  top: 65px;
   bottom: 0;
   left: 0;
   right: 0;
   margin-bottom: 20px;
   padding-bottom: 50px;
   background: ${props => props.theme.colors.light};
-  z-index: 150;
+  z-index: 50;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   overflow-y: hidden;
   height: 100vh;
   transition: transform 300ms ease-in-out;
-  transform: ${props => props.viewMenu ? 'translateX(0)' : 'translateX(-120%)'};
+  transform: ${props => props.viewMenu ? 'translateX(-30%)' : 'translateX(-120%)'};
+  box-shadow: 0 0 8px ${props => props.theme.colors.dark};
 `;
 
 const NavList = styled.ul`
@@ -34,6 +35,9 @@ const NavList = styled.ul`
 `;
 
 const ProductItem = styled.li`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
   font-size: 14px;
   font-weight: 500;
   border-bottom: 2px solid #d5d6d6;
@@ -45,6 +49,9 @@ const ProductItem = styled.li`
 `;
 
 const SiteItem = styled.li`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
   font-weight: 400;
   border-bottom: 1px solid black;
   padding: 20px;
@@ -54,26 +61,18 @@ const SiteItem = styled.li`
 `;
 
 const Buttons = styled.div`
+  align-self: flex-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  justify-items: end;
   gap: 20px;
   margin: 10px 20px;
 `;
 
-const SignUp = styled(Button)`
+const Action = styled(Button)`
+  background: ${props => props.theme.colors.pale};
+  color: ${props => props.theme.colors.dark};
   box-shadow: 0 1px 2px 0 rgba(45, 45, 45, 0.5);
-  &:hover {
-    transform: scale(1.02);
-  }
-`;
-
-const LogIn = styled(Button)`
-  background: #969799;
-  box-shadow: 0 1px 2px 0 rgba(45, 45, 45, 0.5);
-  &:hover {
-    transform: scale(1.02);
-  }
 `;
 
 function MobileMenu({ viewMenu }) {
@@ -81,35 +80,35 @@ function MobileMenu({ viewMenu }) {
     <Wrapper viewMenu={viewMenu}>
       <NavList>
         <Link to="#">
-          <ProductItem id="product-0">Blog</ProductItem>
+          <SiteItem id="site-item-0">City</SiteItem>
         </Link>
         <Link to="#">
-          <ProductItem>Nourish</ProductItem>
+          <SiteItem>Nature</SiteItem>
         </Link>
         <Link to="#">
-          <ProductItem>Product</ProductItem>
+          <SiteItem>Eat & Drink</SiteItem>
+        </Link>
+        <Link to="#">
+          <SiteItem>Entertainment</SiteItem>
         </Link>
       </NavList>
       <NavList>
         <Link to="#">
-          <SiteItem id="site-item-0">Exercise</SiteItem>
+          <ProductItem id="product-0">About</ProductItem>
         </Link>
         <Link to="#">
-          <SiteItem>Nutrition</SiteItem>
+          <ProductItem>Contact</ProductItem>
         </Link>
         <Link to="#">
-          <SiteItem>Activity</SiteItem>
-        </Link>
-        <Link to="#">
-          <SiteItem>Sleep</SiteItem>
+          <ProductItem>Careers</ProductItem>
         </Link>
       </NavList>
       <Buttons>
         <Link to="#">
-          <SignUp>Sign Up</SignUp>
+          <Action>Sign Up</Action>
         </Link>
         <Link to="#">
-          <LogIn>Log In</LogIn>
+          <Action>Log In</Action>
         </Link>
       </Buttons>
     </Wrapper>

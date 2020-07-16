@@ -16,10 +16,10 @@ function Main() {
   const handleMenuClick = () => {
     if (viewMenu) {
       setViewMenu(false);
-      document.body.style.overflow = 'scroll';
+      // document.body.style.overflow = 'scroll';
     } else {
       setViewMenu(true);
-      document.body.style.overflow = 'hidden';
+      // document.body.style.overflow = 'hidden';
     }
     // viewMenu ? setViewMenu(false) : setViewMenu(true);
   }

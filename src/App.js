@@ -21,14 +21,14 @@ function App() {
       <Wrapper id="content">
         <Reset />
         <GlobalStyle />
-        <Palette>
+        {/* <Palette>
           <li id="red">red</li>
           <li id="dark">dark</li>
           <li id="light">light</li>
           <li id="pale">pale</li>
           <li id="pop">pop</li>
           <li id="green">green</li>
-        </Palette>
+        </Palette> */}
         <Main />
       </Wrapper>
     </Theme>

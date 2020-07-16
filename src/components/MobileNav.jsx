@@ -10,7 +10,8 @@ const Wrapper = styled(wrapper)`
   padding: 15px 23px 15px 40px;
   background: ${props => props.theme.colors.pop};
   height: 70px;
-  padding-right: ${props => props.viewMenu ? `${props.width}px` : '0'};
+  z-index: 200;
+  /* padding-right: ${props => props.viewMenu ? `${props.width}px` : '0'}; */
 `;
 
 const MenuButton = styled.div`
