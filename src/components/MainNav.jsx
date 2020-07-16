@@ -13,10 +13,8 @@ const Wrapper = styled.div`
   padding-left: 40px;
   padding-right: 23px;
   padding: 16px 23px 16px 40px;
-  color: ${props => props.theme.colors.dark};
-  background: ${({theme}) => theme.colors.pop};
-  /* border-bottom: 0.5px solid #d5d6d6; */
-  /* border-top: 1px solid #d5d6d6; */
+  background: ${({theme}) => theme.colors.dark};
+  box-shadow: 0 2px 2px rgba(0,0,0,0.4);
   transition: transform 150ms ease;
   transform: translateY(0);
   ${props => {
@@ -41,6 +39,7 @@ const NavLink = styled.li`
   text-transform: uppercase;
   /* margin: 29px 25px; */
   padding: 2px 0;
+  color: ${props => props.theme.colors.light};
   margin: 0px 10px;
   display: flex;
   justify-content: center;
@@ -51,8 +50,8 @@ const NavLink = styled.li`
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   &:hover {
-    border-bottom: 1px solid black; 
-    border-top: 1px solid black;
+    border-bottom: 1px solid ${props => props.theme.colors.dark}; 
+    border-top: 1px solid ${props => props.theme.colors.dark};
   }
 `;
 

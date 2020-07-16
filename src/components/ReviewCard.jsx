@@ -4,12 +4,13 @@ import wrapper from './shared/Wrapper';
 
 const Wrapper = styled(wrapper)`
   position: relative;
-  padding: 0 40px;
+  padding: 0 30px;
   height: 100%;
   width: 100%;
   border-radius: 15px;
-  background: ${props => props.theme.colors.pale};
+  background: ${props => props.theme.colors.light};
   color: ${props => props.theme.colors.dark};
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
 `;
 
 const LogoContainer = styled.div`

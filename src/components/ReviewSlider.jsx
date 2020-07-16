@@ -16,6 +16,8 @@ const Wrapper = styled.div`
   p {
     text-align: center;
   }
+  background: ${props => props.theme.colors.dark};
+  background: #f4db87;
 `;
 
 
@@ -24,7 +26,7 @@ const Box = styled.div`
   background: #fff;
   height: 184px;
   min-width: 320px;
-
+  border-radius: 15px;
   /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); */
   /* border: 2px double ${props => props.theme.colors.dark}; */
   margin: 0 6px;

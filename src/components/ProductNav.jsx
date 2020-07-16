@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 50px;
-  background: ${props => props.theme.colors.pale};
+  background: ${props => props.theme.colors.light};
   color: ${props => props.theme.colors.dark};
   /* border-bottom: 0.5px solid #d5d6d6; */
   transition: transform 150ms ease;

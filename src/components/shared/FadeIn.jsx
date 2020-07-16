@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const FadeSection = styled.div`
   opacity: 0;
-  transition: opacity 2s ease-in;
+  transition: opacity 600ms ease-in;
   will-change: opacity;
   ${props => {
     if (props.isVisible) {
@@ -21,7 +21,7 @@ function FadeIn(props) {
 
   useEffect(() => {
     const options = {
-      threshold: 0.8
+      threshold: 0.3
     }
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

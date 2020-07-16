@@ -40,12 +40,15 @@ const fadeIn = keyframes`
 `;
 
 const HeroHeading = styled.h1`
+  width: 75%;
+  margin: 0 auto;
   font-size: 2em;
   padding: 10px;
   line-height: 1.2em;
   color: ${props => props.theme.colors.light};
+  background: rgba(0,0,0,0.4);
   text-align: center;
-  animation: ${fadeIn} 1s ease-in forwards;
+  animation: ${fadeIn} 800ms ease-in forwards;
   @media (min-width: 780px) {
     font-size: 3em;
   }
@@ -55,7 +58,7 @@ const HeroHeading = styled.h1`
 `;
 
 const HeroButton = styled(Button)`
-  padding: 15px 85px;
+  padding: 15px;
   margin-top: 28px;
   font-weight: 550;
 `;
@@ -70,7 +73,7 @@ function Hero(props) {
             Experience the charm of an innovative city that breathes culture.
           </HeroHeading>
         </FadeIn>
-        <HeroButton>Join Explore Leuven</HeroButton>
+        {/* <HeroButton>Join Explore Leuven</HeroButton> */}
       </HeroContentContainer>
     </Wrapper>
   );
