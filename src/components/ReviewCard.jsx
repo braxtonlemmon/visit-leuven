@@ -6,6 +6,9 @@ const Wrapper = styled(wrapper)`
   padding: 0 40px;
   height: 100%;
   width: 100%;
+  border-radius: 15px;
+  background: ${props => props.theme.colors.pale};
+  color: ${props => props.theme.colors.dark};
 `;
 
 const LogoContainer = styled.div`
@@ -21,14 +24,13 @@ const LogoImage = styled.img`
 
 const ReviewText = styled.p`
   text-align: center;
+  font-size: 1.6em;
+  font-weight: lighter;
 `;
 
 function ReviewCard(props) {
   return (
     <Wrapper>
-      <LogoContainer>
-        <LogoImage src={props.review.imgUrl} alt={`${props.review.author} logo`} />
-      </LogoContainer>
       <ReviewText>
         "{props.review.content}"
       </ReviewText>

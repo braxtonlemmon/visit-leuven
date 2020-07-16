@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Viga', sans-serif;
     margin: 0;
     padding: 0;
+    background: ${props => props.theme.colors.light};
   }
 
   * {

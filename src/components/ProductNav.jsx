@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   background: ${props => props.theme.colors.pale};
   color: ${props => props.theme.colors.dark};
   /* border-bottom: 0.5px solid #d5d6d6; */
-  transition: transform 550ms ease;
+  transition: transform 150ms ease;
   transform: translateY(0);
   transform: ${props => props.isHeroVisible ? 'translateY(0)' : 'translateY(-%100)'};
   ${props => {
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   p {
     font-size: 2em;
     margin: 0 auto;
-    letter-spacing: 12px;
+    letter-spacing: 14px;
     padding: 10px;
   }
 `;

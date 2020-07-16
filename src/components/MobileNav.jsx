@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import wrapper from './shared/Wrapper';
+import BikeLogo from './BikeLogo';
 
 const Wrapper = styled(wrapper)`
   position: relative;
   width: 100%;
   padding: 15px 23px 15px 40px;
-  background: #fff;
-  border-bottom: 1px solid #d5d6d6;
+  background: ${props => props.theme.colors.pop};
+  height: 70px;
+  padding-right: ${props => props.viewMenu ? `${props.width}px` : '0'};
 `;
 
 const MenuButton = styled.div`
@@ -52,8 +54,18 @@ const MenuButton = styled.div`
 const Logo = styled.img``;
 
 function MobileNav(props) {
+  const getScrollbarWidth = () => {
+    const scrollbox = document.createElement('div');
+    scrollbox.style.overflow = 'scroll';
+    document.body.appendChild(scrollbox);
+    const width = scrollbox.offsetWidth - scrollbox.clientWidth;
+    document.body.removeChild(scrollbox);
+    return width;
+  }
+  const width = getScrollbarWidth();
+
   return (
-    <Wrapper>
+    <Wrapper viewMenu={props.viewMenu} width={width}>
       <MenuButton
         onClick={() => props.handleMenuClick()}
         viewMenu={props.viewMenu}
@@ -64,12 +76,7 @@ function MobileNav(props) {
           <div className={props.viewMenu ? "line3 view" : "line3"}></div>
         </div>
       </MenuButton>
-      <Link to="#">
-        <Logo
-          src={`${process.env.PUBLIC_URL}/img/ifit-coach-logo.png`}
-          alt="iFit logo"
-        />
-      </Link>
+      <BikeLogo />
     </Wrapper>
   );
 }

@@ -1,23 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Button from './shared/Button'; 
 
 const Wrapper = styled.div`
   position: fixed;
-  top: 48px;
+  top: 70px;
   bottom: 0;
   left: 0;
   right: 0;
   margin-bottom: 20px;
   padding-bottom: 50px;
-  background: #FFF;
+  background: ${props => props.theme.colors.light};
   z-index: 150;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   overflow-y: hidden;
   height: 100vh;
+  transition: transform 300ms ease-in-out;
+  transform: ${props => props.viewMenu ? 'translateX(0)' : 'translateX(-120%)'};
 `;
 
 const NavList = styled.ul`
@@ -74,9 +76,9 @@ const LogIn = styled(Button)`
   }
 `;
 
-function MobileMenu() {
+function MobileMenu({ viewMenu }) {
   return (
-    <Wrapper>
+    <Wrapper viewMenu={viewMenu}>
       <NavList>
         <Link to="#">
           <ProductItem id="product-0">Blog</ProductItem>

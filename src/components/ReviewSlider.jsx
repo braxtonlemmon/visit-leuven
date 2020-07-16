@@ -12,7 +12,6 @@ const Wrapper = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
   width: 100%;
-  background: #f4f5f7;
   overflow: hidden;
   p {
     text-align: center;
@@ -23,8 +22,9 @@ const Box = styled.div`
   background: #fff;
   height: 184px;
   min-width: 320px;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
+ 
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); */
+  /* border: 2px double ${props => props.theme.colors.dark}; */
   margin: 0 6px;
   @media (min-width: 780px) {
     min-width: 400px;
@@ -39,7 +39,7 @@ const SlideButton = styled.div`
   width: 40px;
   border-radius: 50%;
   border: 2px solid #8b919e;
-  background: rgba(0, 12, 40, 0.79);
+  background: #1D1D2Caa;
   cursor: pointer;
   position: absolute;
   display: flex;

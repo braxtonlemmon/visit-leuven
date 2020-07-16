@@ -20,11 +20,14 @@ function FadeIn(props) {
   const domRef = useRef();
 
   useEffect(() => {
+    const options = {
+      threshold: 0.8
+    }
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         setVisible(entry.isIntersecting)
       });
-    });
+    }, options);
     observer.observe(domRef.current);
     const current = domRef.current;
     return () => observer.unobserve(current);

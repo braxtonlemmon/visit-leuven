@@ -6,11 +6,15 @@ const Button = styled.button`
   background: ${(props) => props.theme.colors.light};
   color: ${(props) => props.theme.colors.dark};
   font-weight: bold;
+  font-size: 14px;
   border: none;
   border-radius: 4px;
   padding: 10px 19px;
   outline: none;
   cursor: pointer;
+  &:hover {
+    background: ${props => props.theme.colors.pale};
+  }
 `;
 
 export default Button;

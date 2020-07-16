@@ -14,8 +14,9 @@ const Wrapper = styled.header`
 `;
 
 function Header(props) {
+
   return (
-    <Wrapper id="header">
+    <Wrapper id="header" viewMenu={props.viewMenu} >
       <Responsive as={Segment} minWidth={780}>
         <ProductNav isHeroVisible={props.isHeroVisible} />
         <MainNav isHeroVisible={props.isHeroVisible} />

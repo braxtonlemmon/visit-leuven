@@ -43,7 +43,7 @@ const HeroHeading = styled.h1`
   font-size: 2em;
   padding: 10px;
   line-height: 1.2em;
-  color: #FFF;
+  color: ${props => props.theme.colors.light};
   text-align: center;
   animation: ${fadeIn} 1s ease-in forwards;
   @media (min-width: 780px) {
@@ -58,9 +58,6 @@ const HeroButton = styled(Button)`
   padding: 15px 85px;
   margin-top: 28px;
   font-weight: 550;
-  &:hover {
-    background-color: rgba(90,78,189,1);
-  }
 `;
 
 function Hero(props) {
@@ -70,10 +67,10 @@ function Hero(props) {
       <HeroContentContainer>
         <FadeIn>
           <HeroHeading isHeroVisible={props.isHeroVisible}>
-            The best personal training, right in your own home
+            Experience the charm of an innovative city that breathes culture.
           </HeroHeading>
         </FadeIn>
-        <HeroButton>Join iFit Coach</HeroButton>
+        <HeroButton>Join Explore Leuven</HeroButton>
       </HeroContentContainer>
     </Wrapper>
   );

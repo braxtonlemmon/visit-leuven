@@ -7,6 +7,7 @@ import wrapper from './shared/Wrapper';
 
 const Wrapper = styled(wrapper)`
   margin: 0 30px;
+  width: 100%;
 `;
 
 const CardWrapper = styled.div`

@@ -14,7 +14,14 @@ function Main() {
   const [viewMenu, setViewMenu] = useState(false);
   
   const handleMenuClick = () => {
-    viewMenu ? setViewMenu(false) : setViewMenu(true);
+    if (viewMenu) {
+      setViewMenu(false);
+      document.body.style.overflow = 'scroll';
+    } else {
+      setViewMenu(true);
+      document.body.style.overflow = 'hidden';
+    }
+    // viewMenu ? setViewMenu(false) : setViewMenu(true);
   }
   
   useEffect(() => {
@@ -43,11 +50,9 @@ function Main() {
           handleMenuClick={handleMenuClick}
           viewMenu={viewMenu}
       />
-      { viewMenu &&
       <Responsive as={Segment} maxWidth={780} >
-        <MobileMenu />
+        <MobileMenu viewMenu={viewMenu} />
       </Responsive>
-      } 
       <Hero 
         isHeroVisible={isHeroVisible}
       />
