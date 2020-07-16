@@ -12,8 +12,16 @@ const Wrapper = styled(wrapper)`
   }
 `;
 
+const ImageHolder = styled.div`
+  height: 260px;
+  width: 260px;
+`;
+
 const Image = styled.img`
-  height: 258px;
+  border-radius: 35%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 `;
 
 const Title = styled.h3`
@@ -23,15 +31,18 @@ const Title = styled.h3`
   text-align: center;
 `;
 
-function EquipmentCard(props) {
+function LeuvenCard(props) {
   return (
     <Wrapper>
       <Link to='#'>
+        <ImageHolder>
         <Image src={props.item.imgUrl} alt={props.item.name} />
+
+        </ImageHolder>
         <Title>{props.item.name}</Title> 
     </Link>
     </Wrapper>
   )
 }
 
-export default EquipmentCard;
+export default LeuvenCard;

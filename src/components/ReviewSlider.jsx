@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import ReviewCard from "./ReviewCard";
 import REVIEWS from "../data/ReviewData";
 
@@ -18,11 +18,13 @@ const Wrapper = styled.div`
   }
 `;
 
+
+
 const Box = styled.div`
   background: #fff;
   height: 184px;
   min-width: 320px;
- 
+
   /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); */
   /* border: 2px double ${props => props.theme.colors.dark}; */
   margin: 0 6px;

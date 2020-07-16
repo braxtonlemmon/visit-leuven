@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import DesktopCard from './DesktopCard';
-import DESKTOP_ITEMS from '../data/DesktopData';
+import FeaturedCard from './FeaturedCard';
+import DESKTOP_ITEMS from '../data/FeaturedData';
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,13 +12,13 @@ const Wrapper = styled.div`
   max-width: 1300px;
 `;
 
-function DesktopLibrary() {
+function FeaturedLibrary() {
   const getItems = () => {
-    const desktopCards = [];
-    DESKTOP_ITEMS.forEach(item => desktopCards.push(
-      <DesktopCard key={`card~${item.id}`} item={item} />
+    const FeaturedCards = [];
+    DESKTOP_ITEMS.forEach(item => FeaturedCards.push(
+      <FeaturedCard key={`card~${item.id}`} item={item} />
     ))
-    return desktopCards;
+    return FeaturedCards;
   }
   
   return (
@@ -28,4 +28,4 @@ function DesktopLibrary() {
   )
 }
 
-export default DesktopLibrary;
+export default FeaturedLibrary;

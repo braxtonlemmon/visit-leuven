@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import EquipmentCard from './EquipmentCard';
+import LeuvenCard from './LeuvenCard';
 import FadeIn from './shared/FadeIn';
-import EQUIPMENT from '../data/EquipmentData';
+import EQUIPMENT from '../data/LeuvenData';
 import wrapper from './shared/Wrapper';
 
 const Wrapper = styled(wrapper)`
@@ -24,12 +24,12 @@ const Heading = styled.h2`
   text-align: center;
 `;
 
-function EquipmentSelection() {
+function LeuvenSelection() {
   const getEquipment = () => {
     const equipment = [];
     EQUIPMENT.forEach(item => equipment.push(
       <FadeIn key={`equipment-fade~${item.id}`}>
-        <EquipmentCard key={`equipment~${item.id}`} item={item} />
+        <LeuvenCard key={`equipment~${item.id}`} item={item} />
       </FadeIn>
     ))
     return equipment;
@@ -47,4 +47,4 @@ function EquipmentSelection() {
   );
 }
 
-export default EquipmentSelection;
+export default LeuvenSelection;

@@ -26,6 +26,8 @@ const ImageBox = styled.div`
 const Image = styled.img`
   height: 100%;
   width: 100%;
+  object-fit: cover;
+  object-position: center;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 `;
@@ -102,7 +104,7 @@ const Thumbnail = styled.img`
   border-radius: 4px;
 `;
 
-function DesktopCard(props) {
+function FeaturedCard(props) {
   return (
     <Wrapper>
       <ImageBox>
@@ -140,4 +142,4 @@ function DesktopCard(props) {
   )
 }
 
-export default DesktopCard;
+export default FeaturedCard;

@@ -3,8 +3,8 @@ import MobileMenu from './MobileMenu';
 import Header from './Header';
 import Hero from './Hero';
 import ReviewSlider from './ReviewSlider';
-import DesktopLibrary from './DesktopLibrary'
-import EquipmentSelection from './EquipmentSelection';
+import FeaturedLibrary from './FeaturedLibrary'
+import LeuvenSelection from './LeuvenSelection';
 import Footer from './Footer';
 import { Responsive, Segment } from 'semantic-ui-react';
 
@@ -57,8 +57,8 @@ function Main() {
         isHeroVisible={isHeroVisible}
       />
       <ReviewSlider />
-      <DesktopLibrary />
-      <EquipmentSelection />
+      <FeaturedLibrary />
+      <LeuvenSelection />
       <Footer />
     </>
   )
