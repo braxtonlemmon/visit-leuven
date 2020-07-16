@@ -38,7 +38,7 @@ function EquipmentSelection() {
   return (
     <Wrapper id="equip">
       <Heading>
-        Interested in our exciting iFit-enabled equipment?
+        Ready to explore Leuven?
       </Heading>
       <CardWrapper>
         { getEquipment() }

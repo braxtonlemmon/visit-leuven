@@ -31,9 +31,9 @@ function Main() {
   useEffect(() => {
     const handleScroll = () => {
       const hero = document.getElementById('hero').getBoundingClientRect();
-      if (hero.bottom < 127 && isHeroVisible) {
+      if (hero.bottom < 200 && isHeroVisible) {
         setIsHeroVisible(false);
-      } else if (hero.bottom > 127) {
+      } else if (hero.bottom > 200) {
         setIsHeroVisible(true);
       }
     }
