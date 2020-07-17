@@ -8,7 +8,7 @@ const Wrapper = styled(wrapper)`
   position: relative;
   width: 100%;
   padding: 15px 23px 15px 40px;
-  background: ${props => props.theme.colors.pop};
+  background: ${props => props.theme.colors.dark};
   height: 70px;
   z-index: 200;
   /* padding-right: ${props => props.viewMenu ? `${props.width}px` : '0'}; */
@@ -31,7 +31,7 @@ const MenuButton = styled.div`
       margin: 6px 0;
       height: 2px;
       width: 35px;
-      background: rgba(46, 49, 52, 0.8);
+      background: ${props => props.theme.colors.light};
       transition: transform 0.4s ease;
     }
     .line1 {
