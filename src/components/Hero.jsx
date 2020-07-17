@@ -2,6 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import FadeIn from './shared/FadeIn';
 import wrapper from './shared/Wrapper';
+import LazyLoad from 'react-lazyload';
 
 const Wrapper = styled(wrapper)`
   width: 100%;
@@ -59,7 +60,9 @@ const HeroHeading = styled.h1`
 function Hero(props) {
   return (
     <Wrapper id="hero">
-      <HeroImage src={process.env.PUBLIC_URL + '/img/city_hall.JPG'} alt="hero image" />
+      <LazyLoad height={1000}>
+        <HeroImage src={process.env.PUBLIC_URL + '/img/city_hall.JPG'} alt="hero image" />
+      </LazyLoad>
       <HeroContentContainer>
         <FadeIn>
           <HeroHeading isHeroVisible={props.isHeroVisible}>

@@ -7,6 +7,7 @@ import FeaturedLibrary from './FeaturedLibrary'
 import LeuvenSelection from './LeuvenSelection';
 import Footer from './Footer';
 import { Responsive, Segment } from 'semantic-ui-react';
+import LazyLoad from 'react-lazyload';
 
 function Main({ handleMenuClick, viewMenu }) {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
@@ -41,9 +42,10 @@ function Main({ handleMenuClick, viewMenu }) {
       <Responsive as={Segment} maxWidth={780} >
         <MobileMenu viewMenu={viewMenu} />
       </Responsive>
+
       <Hero 
         isHeroVisible={isHeroVisible}
-      />
+        />
       <ReviewSlider />
       <FeaturedLibrary />
       <LeuvenSelection />
