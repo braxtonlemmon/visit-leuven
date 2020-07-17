@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/visit-leuven/precache-manifest.ddfa4c0bebed8658c8ce024a19b22ac4.js"
+  "/visit-leuven/precache-manifest.14c81f898697a94c07c37ae9412a43d1.js"
 );
 
 self.addEventListener('message', (event) => {

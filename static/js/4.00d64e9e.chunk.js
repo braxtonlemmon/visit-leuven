@@ -1,0 +1,2 @@
+(this["webpackJsonpexplore-leuven"]=this["webpackJsonpexplore-leuven"]||[]).push([[4],{315:function(e,t,n){"use strict";n.r(t);var r=n(2),u=n(0),a=n.n(u);function i(){var e=Object(r.a)(["\n  width: 100%;\n  height: auto;\n"]);return i=function(){return e},e}var l=n(1).default.img(i());t.default=function(){var e=Object(u.useRef)(null);return a.a.createElement(l,{src:"/visit-leuven/img/city_hall.JPG",alt:"hero image",ref:e})}}}]);
+//# sourceMappingURL=4.00d64e9e.chunk.js.map

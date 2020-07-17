@@ -1,26 +1,32 @@
 {
   "files": {
     "main.css": "/visit-leuven/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/visit-leuven/static/js/main.646a178c.chunk.js",
-    "main.js.map": "/visit-leuven/static/js/main.646a178c.chunk.js.map",
-    "runtime-main.js": "/visit-leuven/static/js/runtime-main.ec33cada.js",
-    "runtime-main.js.map": "/visit-leuven/static/js/runtime-main.ec33cada.js.map",
+    "main.js": "/visit-leuven/static/js/main.ea90519b.chunk.js",
+    "main.js.map": "/visit-leuven/static/js/main.ea90519b.chunk.js.map",
+    "runtime-main.js": "/visit-leuven/static/js/runtime-main.548c6087.js",
+    "runtime-main.js.map": "/visit-leuven/static/js/runtime-main.548c6087.js.map",
     "static/css/2.12aca318.chunk.css": "/visit-leuven/static/css/2.12aca318.chunk.css",
-    "static/js/2.89c44108.chunk.js": "/visit-leuven/static/js/2.89c44108.chunk.js",
-    "static/js/2.89c44108.chunk.js.map": "/visit-leuven/static/js/2.89c44108.chunk.js.map",
+    "static/js/2.d0a29069.chunk.js": "/visit-leuven/static/js/2.d0a29069.chunk.js",
+    "static/js/2.d0a29069.chunk.js.map": "/visit-leuven/static/js/2.d0a29069.chunk.js.map",
+    "static/js/3.b20a3c1e.chunk.js": "/visit-leuven/static/js/3.b20a3c1e.chunk.js",
+    "static/js/3.b20a3c1e.chunk.js.map": "/visit-leuven/static/js/3.b20a3c1e.chunk.js.map",
+    "static/js/4.00d64e9e.chunk.js": "/visit-leuven/static/js/4.00d64e9e.chunk.js",
+    "static/js/4.00d64e9e.chunk.js.map": "/visit-leuven/static/js/4.00d64e9e.chunk.js.map",
+    "static/js/5.3f0741b4.chunk.js": "/visit-leuven/static/js/5.3f0741b4.chunk.js",
+    "static/js/5.3f0741b4.chunk.js.map": "/visit-leuven/static/js/5.3f0741b4.chunk.js.map",
     "index.html": "/visit-leuven/index.html",
-    "precache-manifest.ddfa4c0bebed8658c8ce024a19b22ac4.js": "/visit-leuven/precache-manifest.ddfa4c0bebed8658c8ce024a19b22ac4.js",
+    "precache-manifest.14c81f898697a94c07c37ae9412a43d1.js": "/visit-leuven/precache-manifest.14c81f898697a94c07c37ae9412a43d1.js",
     "service-worker.js": "/visit-leuven/service-worker.js",
     "static/css/2.12aca318.chunk.css.map": "/visit-leuven/static/css/2.12aca318.chunk.css.map",
     "static/css/main.5ecd60fb.chunk.css.map": "/visit-leuven/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.89c44108.chunk.js.LICENSE.txt": "/visit-leuven/static/js/2.89c44108.chunk.js.LICENSE.txt",
+    "static/js/2.d0a29069.chunk.js.LICENSE.txt": "/visit-leuven/static/js/2.d0a29069.chunk.js.LICENSE.txt",
     "static/media/index.css": "/visit-leuven/static/media/viga-latin-400.f73c6b66.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.ec33cada.js",
+    "static/js/runtime-main.548c6087.js",
     "static/css/2.12aca318.chunk.css",
-    "static/js/2.89c44108.chunk.js",
+    "static/js/2.d0a29069.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.646a178c.chunk.js"
+    "static/js/main.ea90519b.chunk.js"
   ]
 }

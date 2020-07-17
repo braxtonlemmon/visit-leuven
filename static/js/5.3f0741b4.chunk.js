@@ -1,0 +1,2 @@
+(this["webpackJsonpexplore-leuven"]=this["webpackJsonpexplore-leuven"]||[]).push([[5],{317:function(e,n,r){"use strict";r.r(n);var t=r(2),a=r(0),i=r.n(a);function u(){var e=Object(t.a)(["\n  border-radius: 50%;\n  height: 100%;\n  width: 100%;\n  object-fit: cover;\n  box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);\n"]);return u=function(){return e},e}var c=r(1).default.img(u());n.default=function(e){var n=e.item;return i.a.createElement(c,{className:"leuven-image",src:n.imgUrl,alt:n.name})}}}]);
+//# sourceMappingURL=5.3f0741b4.chunk.js.map
