@@ -17,7 +17,7 @@ const MainIcon = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 100%;
+  height: 50px;
   transition: transform 400ms ease-in-out;
   fill: white;
 `;

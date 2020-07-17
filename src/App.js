@@ -20,9 +20,13 @@ function App() {
     viewMenu ? setViewMenu(false) : setViewMenu(true);
   }; 
 
+  const handleWindowClick = () => {
+    if (viewMenu) setViewMenu(false);
+  }
+
   return (
     <Theme>
-      <Wrapper id="content" onClick={handleMenuClick} >
+      <Wrapper id="content" onClick={handleWindowClick} >
         <Reset />
         <GlobalStyle />
         <Main 
