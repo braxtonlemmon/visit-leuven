@@ -50,8 +50,8 @@ const NavLink = styled.li`
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   &:hover {
-    border-bottom: 1px solid ${props => props.theme.colors.dark}; 
-    border-top: 1px solid ${props => props.theme.colors.dark};
+    border-bottom: 1px solid ${props => props.theme.colors.light}; 
+    border-top: 1px solid ${props => props.theme.colors.light};
   }
 `;
 

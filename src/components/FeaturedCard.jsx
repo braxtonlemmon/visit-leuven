@@ -29,9 +29,8 @@ const Wrapper = styled.div`
   cursor: pointer;
   background: ${props => props.theme.colors.pale};
   background: rgba(255,255,255,0.5);
-  transition: box-shadow 0.5s ease;
+  transition: box-shadow 300ms ease;
   &:hover {
-    transform: translateY(-0.6px);
     box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.33), -2px 5px 4px rgba(0, 0, 0, 0.33);
   }
   h3 {

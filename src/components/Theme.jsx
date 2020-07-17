@@ -9,7 +9,8 @@ const theme = {
     light: '#EDEAE5',
     pale:  '#3CBCC3',
     pop:   '#EBA63F',
-    green: '#438945'
+    green: '#438945',
+    slider: '#a41a21'
   }
 }
 
