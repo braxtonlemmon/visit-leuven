@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/visit-leuven/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/visit-leuven/static/js/main.ea90519b.chunk.js",
-    "main.js.map": "/visit-leuven/static/js/main.ea90519b.chunk.js.map",
+    "main.js": "/visit-leuven/static/js/main.8b7da56a.chunk.js",
+    "main.js.map": "/visit-leuven/static/js/main.8b7da56a.chunk.js.map",
     "runtime-main.js": "/visit-leuven/static/js/runtime-main.548c6087.js",
     "runtime-main.js.map": "/visit-leuven/static/js/runtime-main.548c6087.js.map",
     "static/css/2.12aca318.chunk.css": "/visit-leuven/static/css/2.12aca318.chunk.css",
@@ -15,7 +15,7 @@
     "static/js/5.3f0741b4.chunk.js": "/visit-leuven/static/js/5.3f0741b4.chunk.js",
     "static/js/5.3f0741b4.chunk.js.map": "/visit-leuven/static/js/5.3f0741b4.chunk.js.map",
     "index.html": "/visit-leuven/index.html",
-    "precache-manifest.14c81f898697a94c07c37ae9412a43d1.js": "/visit-leuven/precache-manifest.14c81f898697a94c07c37ae9412a43d1.js",
+    "precache-manifest.9754f3c770529d4d93cdc0f048efb966.js": "/visit-leuven/precache-manifest.9754f3c770529d4d93cdc0f048efb966.js",
     "service-worker.js": "/visit-leuven/service-worker.js",
     "static/css/2.12aca318.chunk.css.map": "/visit-leuven/static/css/2.12aca318.chunk.css.map",
     "static/css/main.5ecd60fb.chunk.css.map": "/visit-leuven/static/css/main.5ecd60fb.chunk.css.map",
@@ -27,6 +27,6 @@
     "static/css/2.12aca318.chunk.css",
     "static/js/2.d0a29069.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.ea90519b.chunk.js"
+    "static/js/main.8b7da56a.chunk.js"
   ]
 }

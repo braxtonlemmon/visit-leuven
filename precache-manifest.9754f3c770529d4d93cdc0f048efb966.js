@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "716820735dcf78fd90a0db372fe7b2a5",
+    "revision": "087dbdb22452784cc5c68aa6a54deae1",
     "url": "/visit-leuven/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/visit-leuven/static/css/2.12aca318.chunk.css"
   },
   {
-    "revision": "5bf731cd3dc86002baa2",
+    "revision": "d50ae2e0128ff9116c22",
     "url": "/visit-leuven/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/visit-leuven/static/js/5.3f0741b4.chunk.js"
   },
   {
-    "revision": "5bf731cd3dc86002baa2",
-    "url": "/visit-leuven/static/js/main.ea90519b.chunk.js"
+    "revision": "d50ae2e0128ff9116c22",
+    "url": "/visit-leuven/static/js/main.8b7da56a.chunk.js"
   },
   {
     "revision": "8bbe365718a8dce8cebe",
