@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/visit-leuven/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/visit-leuven/static/js/main.646a178c.chunk.js",
+    "main.js.map": "/visit-leuven/static/js/main.646a178c.chunk.js.map",
+    "runtime-main.js": "/visit-leuven/static/js/runtime-main.ec33cada.js",
+    "runtime-main.js.map": "/visit-leuven/static/js/runtime-main.ec33cada.js.map",
+    "static/css/2.12aca318.chunk.css": "/visit-leuven/static/css/2.12aca318.chunk.css",
+    "static/js/2.89c44108.chunk.js": "/visit-leuven/static/js/2.89c44108.chunk.js",
+    "static/js/2.89c44108.chunk.js.map": "/visit-leuven/static/js/2.89c44108.chunk.js.map",
+    "index.html": "/visit-leuven/index.html",
+    "precache-manifest.ddfa4c0bebed8658c8ce024a19b22ac4.js": "/visit-leuven/precache-manifest.ddfa4c0bebed8658c8ce024a19b22ac4.js",
+    "service-worker.js": "/visit-leuven/service-worker.js",
+    "static/css/2.12aca318.chunk.css.map": "/visit-leuven/static/css/2.12aca318.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/visit-leuven/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.89c44108.chunk.js.LICENSE.txt": "/visit-leuven/static/js/2.89c44108.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/visit-leuven/static/media/viga-latin-400.f73c6b66.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ec33cada.js",
+    "static/css/2.12aca318.chunk.css",
+    "static/js/2.89c44108.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.646a178c.chunk.js"
+  ]
+}
