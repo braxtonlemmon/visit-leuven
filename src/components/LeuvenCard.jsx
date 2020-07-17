@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { lazy, Suspense} from 'react';
 import styled, {keyframes} from 'styled-components';
 import { Link } from 'react-router-dom';
 import wrapper from './shared/Wrapper';
+const LeuvenCardImage = lazy(() => import('./LeuvenCardImage')); 
 
 const wobble = keyframes`
   0% { transform: rotate(0deg)}
@@ -24,14 +25,6 @@ const ImageHolder = styled.div`
   width: 260px;
 `;
 
-const Image = styled.img`
-  border-radius: 50%;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  box-shadow: 0 0 9px rgba(0,0,0,0.4);
-`;
-
 const Title = styled.h3`
   font-size: 24px;
   line-height: 28px;
@@ -40,12 +33,22 @@ const Title = styled.h3`
   margin-top: 15px;
 `;
 
+const Placeholder = styled.div`
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  color: lightgrey;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+`;
+
 function LeuvenCard(props) {
   return (
     <Wrapper>
       <Link to='#'>
         <ImageHolder>
-          <Image className="leuven-image" src={props.item.imgUrl} alt={props.item.name} />
+          <Suspense fallback={<Placeholder></Placeholder>}>
+            <LeuvenCardImage item={props.item} />
+          </Suspense>
         </ImageHolder>
         <Title>{props.item.name}</Title> 
     </Link>

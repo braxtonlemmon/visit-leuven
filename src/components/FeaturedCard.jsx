@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
+
+const FeaturedCardImage = lazy(() => import('./FeaturedCardImage'));
 
 const Wrapper = styled.div`
   position: relative;
@@ -29,19 +31,20 @@ const Wrapper = styled.div`
   }
 `;
 
-const Image = styled.img`
+const Placeholder = styled.div`
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  background: lightgrey;
 `;
 
 function FeaturedCard(props) {
   return (
     <Wrapper>
-      <Image src={props.item.imgUrl} alt={props.item.alt} />
+      <Suspense fallback={<Placeholder></Placeholder>}>
+        <FeaturedCardImage
+          item={props.item} 
+        />
+      </Suspense>
       <h3>{props.item.title}</h3>
     </Wrapper>
   )

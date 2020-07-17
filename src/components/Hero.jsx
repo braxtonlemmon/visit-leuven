@@ -1,8 +1,7 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import styled, { keyframes } from "styled-components";
 import FadeIn from './shared/FadeIn';
 import wrapper from './shared/Wrapper';
-import LazyLoad from 'react-lazyload';
 
 const Wrapper = styled(wrapper)`
   width: 100%;
@@ -39,6 +38,12 @@ const fadeIn = keyframes`
   }
 `;
 
+const Placeholder = styled.div`
+  width: 100%;
+  height: 480px;
+  background: blue;
+`;
+
 const HeroHeading = styled.h1`
   width: 75%;
   margin: 0 auto;
@@ -56,13 +61,20 @@ const HeroHeading = styled.h1`
     font-size: 4em;
   }
 `;
-
+const MyImage = lazy(() => import('./HeroImage.jsx'));
 function Hero(props) {
   return (
     <Wrapper id="hero">
-      <LazyLoad height={1000}>
-        <HeroImage src={process.env.PUBLIC_URL + '/img/city_hall.JPG'} alt="hero image" />
-      </LazyLoad>
+      <Suspense fallback={<Placeholder></Placeholder>}>
+        <MyImage />
+
+      {/* <HeroImage
+        // data-src={process.env.PUBLIC_URL + "/img/city_hall.JPG"}
+        src={process.env.PUBLIC_URL + "/img/city_hall.JPG"}
+        alt="hero image"
+        /> */}
+      </Suspense>
+
       <HeroContentContainer>
         <FadeIn>
           <HeroHeading isHeroVisible={props.isHeroVisible}>
