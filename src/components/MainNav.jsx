@@ -5,13 +5,13 @@ import Button from './shared/Button';
 import BikeLogo from './BikeLogo';
 
 const Wrapper = styled.div`
-  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   font-size: 1.1em;
-  padding: 25px 0;
+  /* padding: 25px 0; */
+  padding: 16px 0;
   background: ${({theme}) => theme.colors.dark};
   box-shadow: 0 2px 2px rgba(0,0,0,0.4);
   transition: transform 150ms ease;
@@ -55,8 +55,6 @@ const NavLink = styled.li`
 
 const SignUp = styled(Button)`
   padding: 10px 19px;
-  position: absolute;
-  right: 30px;
   &:hover {
     transform: scale(1.02);
   }

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import wrapper from './shared/Wrapper';
 import BikeLogo from './BikeLogo';
 
@@ -51,8 +50,6 @@ const MenuButton = styled.div`
     }
   }
 `;
-
-const Logo = styled.img``;
 
 function MobileNav(props) {
   const getScrollbarWidth = () => {

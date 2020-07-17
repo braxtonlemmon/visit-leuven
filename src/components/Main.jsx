@@ -14,14 +14,7 @@ function Main() {
   const [viewMenu, setViewMenu] = useState(false);
   
   const handleMenuClick = () => {
-    if (viewMenu) {
-      setViewMenu(false);
-      // document.body.style.overflow = 'scroll';
-    } else {
-      setViewMenu(true);
-      // document.body.style.overflow = 'hidden';
-    }
-    // viewMenu ? setViewMenu(false) : setViewMenu(true);
+    viewMenu ? setViewMenu(false) : setViewMenu(true);
   }
   
   useEffect(() => {
@@ -41,7 +34,7 @@ function Main() {
       window.addEventListener('scroll', handleScroll);
     }
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isLoaded])
+  }, [isLoaded, isHeroVisible])
 
   return(
     <>

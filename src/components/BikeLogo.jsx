@@ -3,12 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const MainIcon = styled.div`
-  position: absolute;
-  left: 30px;
-  top: 10px;
   display: grid;
   color: ${props => props.theme.colors.light};
-  height: 70%;
+  height: 100%;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   &:hover > .bike {

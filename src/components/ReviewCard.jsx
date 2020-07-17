@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import wrapper from './shared/Wrapper';
 
 const Wrapper = styled(wrapper)`
@@ -11,17 +11,6 @@ const Wrapper = styled(wrapper)`
   background: ${props => props.theme.colors.light};
   color: ${props => props.theme.colors.dark};
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
-`;
-
-const LogoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 24px;
-  margin-bottom: 16px;
-`;
-
-const LogoImage = styled.img`
 `;
 
 const ReviewText = styled.p`

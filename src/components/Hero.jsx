@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import FadeIn from './shared/FadeIn';
-import Button from './shared/Button';
 import wrapper from './shared/Wrapper';
 
 const Wrapper = styled(wrapper)`
@@ -57,12 +56,6 @@ const HeroHeading = styled.h1`
   }
 `;
 
-const HeroButton = styled(Button)`
-  padding: 15px;
-  margin-top: 28px;
-  font-weight: 550;
-`;
-
 function Hero(props) {
   return (
     <Wrapper id="hero">
@@ -73,7 +66,6 @@ function Hero(props) {
             Experience the charm of an innovative city that breathes culture.
           </HeroHeading>
         </FadeIn>
-        {/* <HeroButton>Join Explore Leuven</HeroButton> */}
       </HeroContentContainer>
     </Wrapper>
   );
