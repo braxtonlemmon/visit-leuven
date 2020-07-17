@@ -5,10 +5,22 @@ import wrapper from './shared/Wrapper';
 
 const Wrapper = styled(wrapper)`
   width: 100%;
+  height: 300px;
   position: relative;
   margin-top: 57px;
+  overflow: hidden;
+  @media (min-width: 600px) {
+    height: 400px;
+  }
   @media (min-width: 780px) {
     margin-top: 122px;
+    height: 500px;
+  }
+  @media (min-width: 1000px) {
+    height: 700px;
+  }
+  @media (min-width: 1200px) {
+    height: 800px;
   }
 `;
 
@@ -38,12 +50,6 @@ const fadeIn = keyframes`
   }
 `;
 
-const Placeholder = styled.div`
-  width: 100%;
-  height: 480px;
-  background: blue;
-`;
-
 const HeroHeading = styled.h1`
   width: 75%;
   margin: 0 auto;
@@ -62,7 +68,15 @@ const HeroHeading = styled.h1`
   }
 `;
 const MyImage = lazy(() => import('./HeroImage.jsx'));
+const Placeholder = styled.div`
+  height: 100%;
+  width: 100%;
+  background: lightgrey;
+`;
+
 function Hero(props) {
+  const width = 500;
+  const height = 500;
   return (
     <Wrapper id="hero">
       <Suspense fallback={<Placeholder></Placeholder>}>
