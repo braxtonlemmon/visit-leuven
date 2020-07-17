@@ -37,7 +37,7 @@ function Legal() {
           <p>Terms of Use</p>
         </Link>
       </div>
-      <p>© ExploreLeuven.com. All Rights Reserved.</p>
+      <p>© ExploreLeuven. All Rights Reserved.</p>
     </LegalWrapper>
   );
 }
