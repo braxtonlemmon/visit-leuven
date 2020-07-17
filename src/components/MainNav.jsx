@@ -5,14 +5,13 @@ import Button from './shared/Button';
 import BikeLogo from './BikeLogo';
 
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   font-size: 1.1em;
-  padding-left: 40px;
-  padding-right: 23px;
-  padding: 16px 23px 16px 40px;
+  padding: 25px 0;
   background: ${({theme}) => theme.colors.dark};
   box-shadow: 0 2px 2px rgba(0,0,0,0.4);
   transition: transform 150ms ease;
@@ -29,7 +28,6 @@ const Wrapper = styled.div`
     }
   }}
 `;
-
 
 const NavLinks = styled.ul`
   display: flex;
@@ -57,7 +55,8 @@ const NavLink = styled.li`
 
 const SignUp = styled(Button)`
   padding: 10px 19px;
-  /* box-shadow: 0 1px 2px 0 rgba(45, 45, 45, 0.5); */
+  position: absolute;
+  right: 30px;
   &:hover {
     transform: scale(1.02);
   }

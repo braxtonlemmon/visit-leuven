@@ -9,7 +9,7 @@ const Wrapper = styled(wrapper)`
   position: relative;
   margin-top: 57px;
   @media (min-width: 780px) {
-    margin-top: 126px;
+    margin-top: 122px;
   }
 `;
 
