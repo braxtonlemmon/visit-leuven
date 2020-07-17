@@ -17,9 +17,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   overflow-y: hidden;
-  height: 100vh;
+  height: 100%;
   transition: transform 300ms ease-in-out;
-  transform: ${props => props.viewMenu ? 'translateX(-30%)' : 'translateX(-120%)'};
+  transform: ${props => props.viewMenu ? 'translateX(30%)' : 'translateX(120%)'};
   box-shadow: 0 0 8px ${props => props.theme.colors.dark};
 `;
 
@@ -37,7 +37,7 @@ const NavList = styled.ul`
 const ProductItem = styled.li`
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: flex-star;
   font-size: 14px;
   font-weight: 500;
   border-bottom: 2px solid #d5d6d6;
@@ -51,7 +51,7 @@ const ProductItem = styled.li`
 const SiteItem = styled.li`
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: flex-start;
   font-weight: 400;
   border-bottom: 1px solid black;
   padding: 20px;
@@ -61,7 +61,7 @@ const SiteItem = styled.li`
 `;
 
 const Buttons = styled.div`
-  align-self: flex-end;
+  align-self: flex-start;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: end;

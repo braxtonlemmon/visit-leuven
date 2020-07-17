@@ -8,14 +8,9 @@ import LeuvenSelection from './LeuvenSelection';
 import Footer from './Footer';
 import { Responsive, Segment } from 'semantic-ui-react';
 
-function Main() {
+function Main({ handleMenuClick, viewMenu }) {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [viewMenu, setViewMenu] = useState(false);
-  
-  const handleMenuClick = () => {
-    viewMenu ? setViewMenu(false) : setViewMenu(true);
-  }
   
   useEffect(() => {
     setIsLoaded(true);

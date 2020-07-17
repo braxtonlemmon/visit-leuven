@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Reset } from 'styled-reset';
 import GlobalStyle from './GlobalStyle';
@@ -14,13 +14,21 @@ const Wrapper = styled.div`
 
 
 function App() {
-  
+  const [viewMenu, setViewMenu] = useState(false);
+
+  const handleMenuClick = () => {
+    viewMenu ? setViewMenu(false) : setViewMenu(true);
+  }; 
+
   return (
     <Theme>
-      <Wrapper id="content">
+      <Wrapper id="content" onClick={handleMenuClick} >
         <Reset />
         <GlobalStyle />
-        <Main />
+        <Main 
+          handleMenuClick={handleMenuClick} 
+          viewMenu={viewMenu} 
+        />
       </Wrapper>
     </Theme>
   );

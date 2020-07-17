@@ -10,12 +10,16 @@ const Wrapper = styled(wrapper)`
   background: ${props => props.theme.colors.dark};
   height: 70px;
   z-index: 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   /* padding-right: ${props => props.viewMenu ? `${props.width}px` : '0'}; */
 `;
 
 const MenuButton = styled.div`
-  position: absolute;
-  left: 18px;
+  /* position: absolute;
+  left: 18px; */
   height: 28px;
   width: 28px;
   display: grid;
@@ -64,6 +68,7 @@ function MobileNav(props) {
 
   return (
     <Wrapper viewMenu={props.viewMenu} width={width}>
+      <BikeLogo />
       <MenuButton
         onClick={() => props.handleMenuClick()}
         viewMenu={props.viewMenu}
@@ -74,7 +79,6 @@ function MobileNav(props) {
           <div className={props.viewMenu ? "line3 view" : "line3"}></div>
         </div>
       </MenuButton>
-      <BikeLogo />
     </Wrapper>
   );
 }
