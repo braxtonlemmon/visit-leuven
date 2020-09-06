@@ -7,7 +7,7 @@ const EQUIPMENT = [
   {
     id: 1,
     name: 'Nature',
-    imgUrl: `${process.env.PUBLIC_URL}/img/featured/beguinage_walking.JPG`,
+    imgUrl: `${process.env.PUBLIC_URL}/img/featured/leuven_nature.jpg`,
   },
   {
     id: 2,
