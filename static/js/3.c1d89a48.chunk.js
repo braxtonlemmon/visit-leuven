@@ -1,2 +1,2 @@
 (this["webpackJsonpexplore-leuven"]=this["webpackJsonpexplore-leuven"]||[]).push([[3],{316:function(e,t,n){"use strict";n.r(t);var r=n(2),i=n(0),o=n.n(i);function a(){var e=Object(r.a)(["\n  height: 100%;\n  width: 100%;\n  object-fit: cover;\n  object-position: center;\n  border-top-left-radius: 4px;\n  border-top-right-radius: 4px;\n"]);return a=function(){return e},e}var u=n(1).default.img(a());t.default=function(e){var t=e.item;return o.a.createElement(u,{src:t.imgUrl,alt:t.alt})}}}]);
-//# sourceMappingURL=3.b20a3c1e.chunk.js.map
+//# sourceMappingURL=3.c1d89a48.chunk.js.map
